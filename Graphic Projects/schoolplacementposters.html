@@ -1,0 +1,337 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="../careerserviceposters.css" rel="stylesheet">
+    <link href="../index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+    <style>
+        .flex-container-wrapper {
+            flex-direction: column;
+            min-height: calc(100vh - 80px);
+        }
+
+        @media (min-width: 640px) {
+            .flex-container-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        /* STYLES FOR EXTERNAL SWIPER CONTROLS */
+        .swiper-container-wrapper {
+            position: relative;
+            padding: 0 45px;
+            /* Add space on the sides for the arrows */
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: black;
+            /* Set arrow color to black */
+        }
+
+        /* Custom positioning for external buttons */
+        .swiper-button-prev.custom-swiper-button {
+            left: 0;
+        }
+
+        .swiper-button-next.custom-swiper-button {
+            right: 0;
+        }
+
+        /* Style for the external pagination */
+        .swiper-pagination-external {
+            position: static;
+            /* Remove absolute positioning */
+            margin-top: 1rem;
+            /* Add some space above the dots */
+        }
+
+        /* Active bullet (number) styling */
+        .swiper-pagination-bullet-active {
+            background: #000000 !important;
+        }
+
+
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+ <!-- Navigation Bar (Top Header) -->
+    <nav class="bg-white shadow-md flex-shrink-0">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <!-- Mobile menu button - visible only on small screens -->
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed (hamburger) -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!-- Icon when menu is open (X icon), initially hidden -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Logo - always visible, centered on mobile, left-aligned on desktop -->
+                <div class="flex flex-1 items-center justify-center sm:justify-start pl-12 sm:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="../index.html" class="logo-text"
+                            style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu - initially hidden, toggled by JS. Contains all sidebar links. -->
+        <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Main Categories and their Sub-links for mobile dropdown -->
+                <a href="../design.html"
+                    class="titles block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+                    aria-current="page">DESIGN</a>
+                <a href="../Design Projects/litnest.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LitNest</a>
+                <a href="../Design Projects/learnbetter.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LearnBetter</a>
+                <a href="../Design Projects/busbuddy.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">BusBuddy</a>
+
+                <a href="../graphicdesign.html"
+                    class="titles block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../Graphic Projects/careerserviceposters.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
+                    Service Posters</a>
+                <a href="../Graphic Projects/schoolplacementposters.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">School
+                    Placement Posters</a>
+                <a href="../Graphic Projects/careersfairs.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
+                    Fairs</a>
+                <a href="../Graphic Projects/gems.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">GEMS
+                    Flyer</a>
+                <a href="../Graphic Projects/futureofmuseumsflyers.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Future
+                    of Museums Flyers</a>
+
+                <a href="../3dprints.html"
+                    class="titles block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">3D
+                    PRINTS</a>
+                <a href="../3D Projects/deskstop.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">DeskStop</a>
+                <a href="../3D Projects/efficensee.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">EfficenSee</a>
+
+                <a href="../coding.html"
+                    class="titles block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CODING</a>
+                <a href="../Coding Projects/amusingourselvestodeath.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
+                <a href="../Coding Projects/musicianwebsite.html"
+                    class="projects block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Musician
+                    Website</a>
+                <a href="../Coding Projects/perviousportfolios.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous
+                    Portfolios</a>
+
+                <a href="../aboutme.html"
+                    class="titles block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ABOUT
+                    ME</a>
+                <a href="../contact.html"
+                    class="titles block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
+                    class="titles block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-linkedin-square text-3xl text-center" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="https://github.com/annikajun" target="_blank"
+                    class="titles block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-github-square text-3xl text.center" aria-hidden="true"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+<!-- Main content area (flex-grow ensures it takes remaining vertical space) -->
+    <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
+        <!-- Sidebar - visible only on medium and larger screens -->
+        <aside class="hidden sm:block w-full sm:w-1/4 bg-white text-center p-4 rounded-lg mr-4 flex-shrink-0">
+            <nav class="flex flex-col space-y-2">
+                <a href="../design.html"
+                    class="titles rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">DESIGN</a>
+                <a href="../Design Projects/litnest.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">LitNest</a>
+                <a href="../Design Projects/learnbetter.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">LearnBetter</a>
+                <a href="../Design Projects/busbuddy.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">BusBuddy</a>
+
+                <a href="../graphicdesign.html"
+                    class="titles rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">GRAPHIC DESIGN</a>
+                <a href="../Graphic Projects/careerserviceposters.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers
+                    Service Posters</a>
+                <a href="../Graphic Projects/schoolplacementposters.html"
+                    class="projects rounded-md px-3 py-2 text-sm bg-gray-500 text-white transition-colors duration-200">School
+                    Placement Posters</a>
+                <a href="../Graphic Projects/careersfairs.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers
+                    Fairs</a>
+                <a href="../Graphic Projects/gems.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">GEMS
+                    Flyer</a>
+                <a href="../Graphic Projects/futureofmuseumsflyers.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Future
+                    of Museums Flyers</a>
+
+                <a href="../3dprints.html"
+                    class="titles rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">3D PRINTS</a>
+                <a href="../3D Projects/deskstop.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">DeskStop</a>
+                <a href="../3D Projects/efficensee.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">EfficenSee</a>
+
+                <a href="../coding.html"
+                    class="titles rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">CODING</a>
+                <a href="../Coding Projects/amusingourselvestodeath.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
+                <a href="../Coding Projects/musicianwebsite.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Musician
+                    Website</a>
+                <a href="../Coding Projects/perviousportfolios.html"
+                    class="projects rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous
+                    Portfolios</a>
+
+                <a href="../aboutme.html"
+                    class="titles rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">ABOUT ME</a>
+
+                <a href="../contact.html"
+                    class="titles rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">CONTACT</a>
+                <div class="flex justify-center">
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
+                        class="titles w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200">
+                        <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/annikajun" target="_blank"
+                        class="titles w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200 ">
+                        <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+            </nav>
+        </aside>
+<!-- Project -->
+  <main class="sm:w-3/4 bg-white">
+    <div class="p-4">
+        <p class="text-3xl text-center font-medium">School Placement</p>
+        <br>
+        <img src="../images/School Placement Posters/School Placement Posters Cover.png" alt="School Placement Thumbnail" class="object-contain h-auto w-full">
+        <br>
+        <p class="text-xl font-medium">School Placement Posters</p>
+        <p class="text-justify text-gray-500">  
+        This page features a collection of posters designed to support the School Placement office in the Education Department at the University of Limerick. My role involved creating clear and informative promotional materials for various aspects of the program, including essential briefing sessions and  CV clinics. The goal was to ensure all communications were easily understandable and visually consistent, helping education students navigate their school placements effectively.</p>
+        <br>
+<!-- Carousel-->
+        <div class="swiper-container-wrapper">
+            <div class="swiper mySwiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../images/School Placement Posters/2024_AutumnBriefing.jpg" alt="Image 1"></div>
+                    <div class="swiper-slide"><img src="../images/School Placement Posters/2024_CV Clinic.jpg" alt="Image 2"></div>
+                </div>
+            </div>
+            <div class="swiper-button-prev custom-swiper-button swiper1-button-prev"></div>
+            <div class="swiper-button-next custom-swiper-button swiper1-button-next"></div>
+            <div class="swiper-pagination swiper-pagination-external swiper1-pagination"></div>
+        </div>
+        <br>
+        <p class="text-xl font-medium">Informational and Workshop Posters</p>
+        <p class="text-justify text-gray-500">
+            This carousel showcases posters designed to inform students about crucial aspects of their school placement journey, including the mandatory Briefing sessions and CV Clinics.  </p>
+        <br>
+<!--Carousel 2-->
+       <div class="swiper-container-wrapper">
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../images/School Placement Posters/2024_SPService.jpg" alt="Image 1"></div>
+                    <div class="swiper-slide"><img src="../images/School Placement Posters/2024_OptimiseYourPlacement.jpg" alt="Image 2"></div>
+                </div>
+            </div>
+            <div class="swiper-button-prev custom-swiper-button swiper2-button-prev"></div>
+            <div class="swiper-button-next custom-swiper-button swiper2-button-next"></div>
+            <div class="swiper-pagination swiper-pagination-external swiper2-pagination"></div>
+        </div>
+
+        <br>
+        <p class="text-xl font-medium">Service Promotion and Engagement</p>
+        <p class="text-justify text-gray-500">
+            This section features posters created to promote the overall School Placement Service and encourage students to optimise their placement experience. The designs focus on highlighting the benefits and resources available, aiming to maximise student engagement and success during their placements.  </p>
+    <div>
+    </div>
+        </main>
+    </div>
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+<!-- Scroll Up Button - positioned fixed at bottom right -->
+    <div class="scrollbutton fixed bottom-4 right-4 z-50">
+        <a href="#top" class="block">
+            <!-- Icon with Tailwind classes replacing the custom CSS -->
+            <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+    <script src="../sidebar.js"></script>
+    <script>
+        new Swiper(".mySwiper1", {
+            loop: true,
+            pagination: {
+                el: ".swiper1-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper1-button-next",
+                prevEl: ".swiper1-button-prev",
+            },
+        });
+
+        new Swiper(".mySwiper2", {
+            loop: true,
+            pagination: {
+                el: ".swiper2-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper2-button-next",
+                prevEl: ".swiper2-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>

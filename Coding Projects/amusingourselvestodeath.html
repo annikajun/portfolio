@@ -1,0 +1,339 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="../index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+    <style>
+        .flex-container-wrapper {
+            flex-direction: column;
+            min-height: calc(100vh - 80px);
+            /* Approx height for header (h-16) + footer (py-5) */
+        }
+        @media (min-width: 640px) {
+
+            /* Tailwind's 'sm' breakpoint */
+            .flex-container-wrapper {
+                flex-direction: row;
+            }
+        }
+        main {
+            flex-grow: 1;
+            /* Allows main content to take up available space */
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <nav class="bg-white shadow-md flex-shrink-0">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:justify-start pl-12 sm:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="../index.html" class="logo-text"
+                            style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="../design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+                    aria-current="page">DESIGN</a>
+                <a href="../Design Projects/litnest.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LitNest</a>
+                <a href="../Design Projects/learnbetter.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LearnBetter</a>
+                <a href="../Design Projects/busbuddy.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">BusBuddy</a>
+
+                <a href="../graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../Graphic Projects/careerserviceposters.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
+                    Service Posters</a>
+                <a href="../Graphic Projects/schoolplacementposters.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">School
+                    Placement Posters</a>
+                <a href="../Graphic Projects/careersfairs.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
+                    Fairs</a>
+                <a href="../Graphic Projects/gems.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">GEMS
+                    Flyer</a>
+                <a href="../Graphic Projects/futureofmuseumsflyers.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Future
+                    of Museums Flyers</a>
+
+                <a href="../3dprints.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">3D
+                    PRINTS</a>
+                <a href="../3D Projects/deskstop.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">DeskStop</a>
+                <a href="../3D Projects/efficensee.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">EfficenSee</a>
+
+                <a href="../coding.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CODING</a>
+                <a href="../Coding Projects/amusingourselvestodeath.html"
+                    class="block rounded-md px-5 py-2 text-sm bg-gray-600 text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
+                <a href="../Coding Projects/musicianwebsite.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Musician
+                    Website</a>
+                <a href="../Coding Projects/perviousportfolios.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous
+                    Portfolios</a>
+
+                <a href="../aboutme.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ABOUT
+                    ME</a>
+                <a href="../contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-linkedin-square text-3xl text-center" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="https://github.com/annikajun" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-github-square text-3xl text.center" aria-hidden="true"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
+        <aside class="hidden sm:block w-full sm:w-1/4 bg-white text-center p-4 rounded-lg mr-4 flex-shrink-0">
+            <nav class="flex flex-col space-y-2">
+                <a href="../design.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">DESIGN</a>
+                <a href="../Design Projects/litnest.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">LitNest</a>
+                <a href="../Design Projects/learnbetter.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">LearnBetter</a>
+                <a href="../Design Projects/busbuddy.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">BusBuddy</a>
+
+                <a href="../graphicdesign.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">GRAPHIC DESIGN</a>
+                <a href="../Graphic Projects/careerserviceposters.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers
+                    Service Posters</a>
+                <a href="../Graphic Projects/schoolplacementposters.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">School
+                    Placement Posters</a>
+                <a href="../Graphic Projects/careersfairs.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers
+                    Fairs</a>
+                <a href="../Graphic Projects/gems.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">GEMS
+                    Flyer</a>
+                <a href="../Graphic Projects/futureofmuseumsflyers.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Future
+                    of Museums Flyers</a>
+
+                <a href="../3dprints.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">3D PRINTS</a>
+                <a href="../3D Projects/deskstop.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">DeskStop</a>
+                <a href="../3D Projects/efficensee.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">EfficenSee</a>
+
+                <a href="../coding.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">CODING</a>
+                <a href="../Coding Projects/amusingourselvestodeath.html"
+                    class="rounded-md px-3 py-2 text-sm bg-gray-600 text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
+                <a href="../Coding Projects/musicianwebsite.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Musician
+                    Website</a>
+                <a href="../Coding Projects/perviousportfolios.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Previous
+                    Portfolios</a>
+
+                <a href="../aboutme.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">ABOUT ME</a>
+
+                <a href="../contact.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">CONTACT</a>
+                <div class="flex justify-center">
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:black hover:text-white transition-colors duration-200 ">
+                        <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/annikajun" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200 ">
+                        <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+            </nav>
+        </aside>
+        <main class="lg:w-3/4 md:w-3/4 sm:w-full bg-white">
+            <div class="p-4">
+                <p class="text-3xl text-center font-medium">Amusing Ourselves to Death</p>
+                <br>
+                <p class="text-justify text-gray-500">
+                    This project is an interactive audio-visual performance that explores the ideas from Neil Postman's book, "Amusing Ourselves to Death," translating abstract concepts of media and public discourse into an interactive experience.</p>
+                <p class="text-justify text-gray-500">    
+                    Developed as a duet performance, the project uses Max/MSP and an Arduino with multiple sensors to create an immersive and thought-provoking experience. The audience is presented with an overwhelming flow of fragmented news from local and global sources, forcing them to reflect on their own media consumption.
+                    The goal was to demonstrate how technology can both engage and distract, mirroring the book's central arguments about the trivialisation of public life.
+                </p>
+                <br>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <a href="https://github.com/annikajun/AmusingOurselvesToDeath/blob/main/_Performance.maxpat" target="_blank"
+                    class="min-w-0 flex items-center justify-center px-4 py-3 bg-black hover:bg-gray-700 rounded-lg text-white text-xs sm:text-sm lg:text-base font-medium whitespace-nowrap overflow-hidden text-ellipsis transition-colors duration-200">
+                    <i class="fa fa-github mr-2"></i> View Max Code
+                </a>
+
+                <a href="https://github.com/annikajun/AmusingOurselvesToDeath/blob/main/arduino%20code/final_assignment.ino" target="_blank"
+                    class="min-w-0 flex items-center justify-center px-4 py-3 bg-black hover:bg-gray-700 rounded-lg text-white text-xs sm:text-sm lg:text-base font-medium whitespace-nowrap overflow-hidden text-ellipsis transition-colors duration-200">
+                    <i class="fa fa-github mr-2"></i> View Arduino Code
+                </a>
+
+                <a href="../images/AOTD Performance.mp4" target="_blank"
+                    class="min-w-0 flex items-center justify-center px-4 py-3 bg-black hover:bg-gray-700 rounded-lg text-white text-xs sm:text-sm lg:text-base font-medium whitespace-nowrap overflow-hidden text-ellipsis transition-colors duration-200">
+                    <i class="ri-video-line mr-2"></i> Watch Demo Video
+                </a>
+                </div>
+
+                <p class="text-2xl font-medium">Concept and Motivation</p>
+                <br>
+                  <img class="w-full h-auto" src="../images/AOTD Set Up.jpeg"
+                        alt="Overview of the Amusing Ourselves to Death project setup with Arduino and MaxMSP.">
+                <p class="text-center text-md text-gray-500">
+                        The project's interactive setup, combining physical and digital elements</p>
+                    <br>
+                <p class="text-justify text-gray-500">
+                    The core idea was inspired by Neil Postman's observation that television transforms serious discourse into "show business," which can desensitise viewers. I wanted to translate this concept into an interactive installation. The performance highlights this by presenting a rapid succession of serious international news clips, only to be abruptly interrupted by a catchy, nonsensical advertisement. This juxtaposition is designed to make the audience aware of how easily the gravity of news can be trivialised.
+                    <br><br>
+                    I intentionally used fragmented news clips to mimic how information is often presented without full context, catering to the short attention spans of our audience. The performance progresses from local news to neighbouring countries and then to global news, creating a mix of languages that underscores the overwhelming and unfiltered nature of today's information landscape. 
+                </p>
+                <br>
+
+                <p class="text-2xl font-medium">System and Interaction</p>
+                <br>
+                <p class="text-justify text-gray-500">
+                    The system was built using an Arduino-based input system that translates physical gestures or environmental data into digital signals. These signals are then sent to MaxMSP, which processes them in real-time to manipulate various audio and visual parameters. The Arduino code was written to continuously read these sensor values and transmit them serially to MaxMSP.
+                    Two performers interact with the system using custom, 3D-printed remotes that house the sensors.
+                    <br><br>
+                    The key interactive elements include:
+                    <ul class="list-disc pl-5 text-gray-500">
+                        <li><b>Ultrasonic Ranger & Slider:</b> Housed in 3D-printed remotes, these sensors allow the performers to control which video collage is displayed. The concept was that as a performer moves closer to the screen (or manipulates the remote), the news becomes more layered and overwhelming.</li>
+                        <li><b>Buttons:</b> An LED button functions as the main "On Air" switch to start and stop the performance, while a secondary button switches control between the two performers' remotes.</li>
+                        <li><b>Potentiometer:</b> Controls the audio volume, which is crucial for building intensity and creating a sense of being overwhelmed.</li>
+                    </ul>
+                    <br>
+                    <p class="text-justify text-gray-500">
+                    The Max patch uses a `MIXFADR` object for crossfading between up to seven video sources and a `PIXL8R` effect that progressively pixelates the video, blurring the lines between different news reports to reinforce our theme. </p>
+                </p>
+                <br>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+        <img class="justify-center w-full" src="../images/AOTD Max patch for serial communication with Arduino.png" alt="Max/MSP patch for serial communication with Arduino">
+        <p class="text-center text-md text-gray-500 mt-2">
+            Max/MSP patch for serial communication with Arduino
+        </p>
+    </div>
+    
+    <div>
+        <img class="justify-center w-full" src="../images/AOTD MaxPatch.png" alt="Max/MSP patch">
+        <p class="text-center text-md text-gray-500 mt-2">
+            Max/MSP patch for manipulate various audio and visual parameters
+        </p>
+    </div>
+    </div>
+
+    <br>
+
+    <div class="relative flex justify-center overflow-hidden">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/I55kGJJf8GU?si=UoVWQsnLTfrQvY_P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <br>
+
+    <p class="text-2xl font-medium">Development Process</p>
+    <br>
+    <p class="text-justify text-gray-500">
+        The process began with brainstorming and sketching out the core concepts and the flow of the performance. Then, I designed and 3D-printed custom enclosures for the sensors to create tangible, remote-like controllers, which enhanced the performance aspect. This involved significant trial and error, especially in designing a mechanism for the ultrasonic ranger to measure small distance changes within its enclosure reliably. 
+    </p>
+
+    <br>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+            <img class="justify-center h-140 w-full" src="../images/AOTD Early concept sketch of the project idea.jpeg" alt="Early concept sketch of the project idea">
+            <p class="text-center text-md text-gray-500 mt-2">
+                Early concept sketch of the project idea
+            </p>
+        </div>
+
+        <div>
+            <img class="justify-center h-140 w-full" src="../images/AOTD Sketch of the performance plan and sensor mapping.jpeg" alt="Sketch of the performance plan and sensor mapping">
+            <p class="text-center text-md text-gray-500 mt-2">
+                Sketch of the performance plan and sensor mapping
+            </p>
+        </div>
+    </div>
+
+    <br>
+
+    <p class="text-2xl font-medium">Reflection</p>
+    <br>
+    <p class="text-justify text-gray-500">
+        This project was an invaluable learning experience in physical computing, interactive system design, and the integration of hardware and software. It solidified my understanding of how Arduino can act as a bridge between the physical and digital worlds, and how Max/MSP provides a powerful platform for real-time media manipulation.
+        <br><br>
+        Beyond the technical skills, "Amusing Ourselves to Death" challenged me to think critically about how interactive experiences can convey complex ideas and encourage user reflection. It highlighted the importance of a seamless user experience, where the technology fades into the background, allowing the message to take centre stage. This project demonstrated my ability to conceptualise, develop, and execute a multi-faceted interactive installation from start to finish.
+    </p>
+
+    <br>
+
+    <div class="flex flex-col sm:flex-row gap-5">
+        <a href="../../images/AOTD Report.pdf" target="_blank" class="flex items-center justify-center px-4 py-3 bg-black hover:bg-gray-500 rounded-lg w-full sm:w-1/3 mt-4 text-white sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">Report</a>
+    </div>
+        </main>
+    </div>
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+    <div class="fixed bottom-4 right-4 z-50">
+        <a href="#top" class="block">
+            <i
+                class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+    <script src="../sidebar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+
+.scrollbutton a {
+    text-decoration: none !important; /* Removes underline */
+    color: inherit !important; /* Inherits color from parent or default */
+}
+
+
+/* Targeting the logo specifically if needed */
+.logo-text {
+    text-decoration: none !important;
+    color: black !important; /* Or whatever color you prefer */
+}
+
+/* For Carousel Indicators */
+.carousel-indicators [data-bs-target] {
+    background-color: black; /* Changes the background of the indicators to black */
+    border: 1px solid black; /* Adds a black border to the indicators */
+}
+
+.carousel-indicators .active {
+    background-color: #000000; /* A slightly different shade for the active indicator */
+    border-color: #000000;
+}
+
+/* For Carousel Control Arrows (Prev/Next) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100%) brightness(0); /* This will turn the white icons black */
+}
+
+/* Styling for all carousel indicator buttons */
+.carousel-indicators button {
+    background-color: black; /* Makes the indicator buttons black */
+    border: 1px solid black; /* Adds a black border to the buttons */
+}
+
+/* Styling for the currently active (selected) carousel indicator button */
+.carousel-indicators .active {
+    background-color: #333; /* A slightly different shade for the active one, or keep it black */
+    border-color: #333; /* Border for the active indicator */
+}
+
+.projects:hover {
+    color: white;
+}
+
+
+.titles:hover {
+    color: white;
+}
+
+/* ================================================
+   STYLES TO MOVE CAROUSEL CONTROLS OUTSIDE IMAGE
+   ================================================ */
+
+/* 1. Reduce the width of the image container to create space on the sides. */
+.carousel-item {
+    width: 90% !important; /* Shrinks the image container slightly. */
+    margin-inline: auto; /* Centers the shrunken container. */
+}
+
+/* 2. Adjust the width of the arrow controls to fit into the new side space. */
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+    width: 5% !important; /* Each arrow takes up half of the remaining space. */
+}
+
+/* 3. Move the indicators to be below the image instead of on top of it. */
+.carousel .carousel-indicators {
+    margin-top: 100px !important; /* Adds space between the image and the indicators. */
+}
+
+/* 4. Add some bottom margin to the entire carousel to account for the moved indicators. */
+.carousel {
+    margin-bottom: 3rem !important; /* Adds space below the indicators before the next element. */
+}
+
+
+/* Add this to your <style> tag in the <head> */
+
+/* Wrapper to hold the swiper and its external controls */
+.swiper-container-wrapper {
+    position: relative;
+    padding: 0 45px; /* Add space on the sides for the arrows */
+}
+
+/* Style and position the navigation arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    color: black; /* Set arrow color to black */
+}
+
+/* Custom positioning for external buttons */
+.swiper-button-prev.custom-swiper-button {
+    left: 0;
+}
+.swiper-button-next.custom-swiper-button {
+    right: 0;
+}
+
+/* Style for the external pagination */
+.swiper-pagination-external {
+    position: static; /* Remove absolute positioning */
+    margin-top: 1rem; /* Add some space above the dots */
+}

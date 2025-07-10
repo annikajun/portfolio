@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- Navigation Bar (Top Header) -->
+    <nav class="white">
+        <div class="mx-auto max-w-8xl px-2 md:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                    <!-- Mobile menu button, now with an ID for JavaScript -->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed, now with an ID -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!-- Icon when menu is open, initially hidden, now with an ID -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-between md:items-stretch pl-12 md:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="index.html" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA </a>
+                    </div>
+                    <div class="hidden md:ml-6 md:block">
+                        <div class="flex">
+                            <a href="design.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"
+                                aria-current="page">DESIGN</a>
+                            <a href="graphicdesign.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">GRAPHIC
+                                DESIGN</a>
+                            <a href="3dprints.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">3D
+                                PRINTS</a>
+                            <a href="coding.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CODING</a>
+                            <a href="aboutme.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">ABOUT ME</a>
+                            <a href="contact.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CONTACT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Mobile menu, now with 'hidden' class by default -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white"
+                    aria-current="page">DESIGN</a>
+                <a href="graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">GRAPHIC
+                    DESIGN</a>
+                <a href="3dprints.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">3D
+                    PRINTS</a>
+                <a href="coding.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CODING</a>
+                <a href="aboutme.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">ABOUT ME</a>
+                <a href="contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content area -->
+    <div class="flex flex-col md:flex-row flex-container-wrapper p-4 flex-grow">
+       <main class="lg:w-2/3 md:w-full">
+        <!-- center image -->
+       <img class="top w-1/3 md:hidden mx-auto" src="images/About.png" alt="About Annika Jungfleisch"> 
+       <p class="text-2xl p-4"> Hello! I'm Annika, an Interaction Designer based in Ireland.</p>
+       <p class="p-4 pr-10 text-lg text-justify">My core interests are in the intersection of digital fabrication and creative coding.
+        My work involves interactive programming, prototyping, and crafting engaging screen-based content. I approach every project with curiosity, creativity, and a hands-on drive, aiming to design thoughtful, tech-driven solutions that make a real impact. </p>
+        <p class="p-4 text-2xl">My Toolkit</p>
+        <div class="grid grid-cols-7 gap-1 w-full">
+            <img src="images/Figma.png" alt="Figma" class="h-10 mx-auto object-contain ">
+            <img src="images/InDesign.png" alt="InDesign" class="h-10 mx-auto object-contain ">
+            <img src="images/FreeCAD.png" alt="FreeCAD" class="h-10 mx-auto object-contain ">
+            <img src="images/Arduino.png" alt="Arduino" class="h-10 mx-auto object-contain ">
+            <img src="images/HTML.png" alt="HTML" class="h-10 mx-auto object-contain ">
+            <img src="images/CSS.png" alt="CSS" class="h-10 mx-auto object-contain ">
+            <img src="images/JavaScript.png" alt="JavaScript" class="h-10 mx-auto object-contain ">
+        </div>
+
+
+        <br>
+        <br>
+       </main>
+        <div class="lg:w-1/4  md:w-3/7  bg-white flex flex-col items-center">
+    <img class="hidden md:block" src="images/About.png" alt="About Annika Jungfleisch"> 
+
+    <a href="images/Annika_Jungfleisch_CV.pdf" target="_blank"
+        class="flex items-center justify-center px-8 py-3 bg-black hover:bg-gray-600 rounded-lg w-3/4 mt-4 text-white sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">
+        <i class="fa fa-download mr-2"></i> View my CV
+    </a>
+    </div>
+
+    </div>
+    </div>
+   
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+
+ <!-- Scroll Up Button - positioned fixed at bottom right -->
+    <div class="fixed bottom-4 right-4 z-50">
+       
+        <a href="#top" class="block">
+            <!-- Icon with Tailwind classes replacing the custom CSS -->
+            <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>

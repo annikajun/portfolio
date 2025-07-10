@@ -1,0 +1,181 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- Navigation Bar (Top Header) -->
+    <nav class="white">
+        <div class="mx-auto max-w-8xl px-2 md:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                    <!-- Mobile menu button, now with an ID for JavaScript -->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed, now with an ID -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!-- Icon when menu is open, initially hidden, now with an ID -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-between md:items-stretch pl-12 md:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="index.html" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA </a>
+                    </div>
+                    <div class="hidden md:ml-6 md:block">
+                        <div class="flex">
+                            <a href="design.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"
+                                aria-current="page">DESIGN</a>
+                            <a href="graphicdesign.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">GRAPHIC
+                                DESIGN</a>
+                            <a href="3dprints.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">3D
+                                PRINTS</a>
+                            <a href="coding.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CODING</a>
+                            <a href="aboutme.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">ABOUT ME</a>
+                            <a href="contact.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CONTACT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Mobile menu, now with 'hidden' class by default -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white"
+                    aria-current="page">DESIGN</a>
+                <a href="graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">GRAPHIC
+                    DESIGN</a>
+                <a href="3dprints.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">3D
+                    PRINTS</a>
+                <a href="coding.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CODING</a>
+                <a href="aboutme.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">ABOUT ME</a>
+                <a href="contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content area -->
+    <div class="top flex flex-col md:flex-row flex-container-wrapper p-4 flex-grow">
+       <main class="md:w-2/4 sm:w-full">
+       <p class="text-2xl p-4"> Let's Connect.</p>
+       <p class="p-4 pr-10 text-lg text-justify">Have a question about my work, a potential project, or simply want to chat about design and coding? The best ways to get in touch are through email or by connecting on LinkedIn. I look forward to hearing from you!
+       </p>
+       <br>
+          <div class="flex gap-8">
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
+                    class="px-6 py-2 scale-150 text-[#3578AF] hover:scale-180 ">
+                    <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
+                    </a> 
+                    <section class="contact section_snap" id="contact">
+                    <div class="tooltip-wrapper">
+                        <button class="tooltip-button" onclick="toggleTooltip('Email')">
+                        <i class="fa fa-envelope text-[#3578AF] scale-300 py-3.5 hover:scale-325"></i>
+                        </button>
+                    <div id="Email" class="tooltip-text">annika.jungfleisch01@gmail.com</div>
+                    </div>
+                    </section>
+            </div>
+            <!-- Featured LinkedIn Posts -->
+            <div class="px-4 py-6">
+                <p class="text-2xl mb-4 text-black">Featured LinkedIn Posts</p>
+                <div class="grid grid-cols-1 grid-cols-2  gap-6">
+                    <!-- LinkedIn Post 1 -->
+                    <a href="https://www.linkedin.com/posts/annika-jungfleisch_what-a-year-its-been-in-may-last-year-activity-7318946015066152960-6P84?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEEGznUBu6jJmYzKrifynVTOwbQyE7jPWiY" target="_blank" class="block bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="images/LinkedIn Post 1.jpeg" alt="LinkedIn Post Thumbnail" class="w-full h-32 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-gray-800 mb-2">What a year it’s been…</h3>
+                            <p class="text-gray-600 text-sm line-clamp-3">In May last year, I stepped into the role of Team Lead for...</p>
+                            <span class="text-blue-600 text-sm mt-2 block hover:underline">Read on LinkedIn &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn Post 2 -->
+                    <a href="https://www.linkedin.com/posts/annika-jungfleisch_im-honored-to-have-received-the-gold-presidents-activity-7255136520909549568-5UO2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEEGznUBu6jJmYzKrifynVTOwbQyE7jPWiY" target="_blank" class="block bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="images/LinkedIn Post 2.jpeg" alt="LinkedIn Post Thumbnail" class="w-full h-32 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-gray-800 mb-2">PVA Award</h3>
+                            <p class="text-gray-600 text-sm line-clamp-3">I'm honored to have received the Gold President's...</p>
+                            <span class="text-blue-600 text-sm mt-2 block hover:underline">Read on LinkedIn &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+                <p class="text-gray-600 text-sm mt-6 text-center">
+                    For more insights and updates, connect with me on <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>.
+                </p>
+            </div>
+       </main>
+    <main class="hidden md:block md:w-2/4">
+            <div class="PictureBubbles bubble-container">
+                <div class="bubble bubble-1">
+                    <img src="images/Contact/Coding.jpeg" alt="VS Code Computer Screen" >
+                </div>
+                <div class="bubble bubble-2">
+                    <img src="images/Contact/VideoContent.JPG" alt="Video Shoot">
+                </div>
+                <div class="bubble bubble-3" alt="Thumbs Up">
+                    <img src="images/Contact/ThumbsUp.JPG">
+                </div>
+                <div class="bubble bubble-4">
+                    <img src="images/Contact/Electronics.jpg" alt="Electronics and 3D Models">
+                </div>
+                <div class="bubble bubble-5">
+                    <img src="images/Contact/ProductDesign.jpeg" alt="Flatback Lamp Prototype">
+                </div>
+                <div class="bubble bubble-6">
+                    <img src="images/Contact/PublicSpeaking.png" alt="Public Speaking">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+
+ <!-- Scroll Up Button - positioned fixed at bottom right -->
+    <div class="fixed bottom-4 right-4 z-50">
+       
+        <a href="#top" class="block">
+            <!-- Icon with Tailwind classes replacing the custom CSS -->
+            <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+
+    <script src="/menu.js"></script>
+</body>
+
+</html>

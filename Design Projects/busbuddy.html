@@ -1,0 +1,281 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="../index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+    <style>
+        .flex-container-wrapper {
+            flex-direction: column;
+            min-height: calc(100vh - 80px);
+            /* Approx height for header (h-16) + footer (py-5) */
+        }
+        @media (min-width: 640px) {
+
+            /* Tailwind's 'sm' breakpoint */
+            .flex-container-wrapper {
+                flex-direction: row;
+            }
+        }
+        main {
+            flex-grow: 1;
+            /* Allows main content to take up available space */
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- Navigation Bar (Top Header) -->
+    <nav class="bg-white shadow-md flex-shrink-0">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <!-- Mobile menu button - visible only on small screens -->
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed (hamburger) -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!-- Icon when menu is open (X icon), initially hidden -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Logo - always visible, centered on mobile, left-aligned on desktop -->
+                <div class="flex flex-1 items-center justify-center sm:justify-start pl-12 sm:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="../index.html" class="logo-text"
+                            style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu - initially hidden, toggled by JS. Contains all sidebar links. -->
+        <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Main Categories and their Sub-links for mobile dropdown -->
+                <a href="../design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+                    aria-current="page">DESIGN</a>
+                <a href="../Design Projects/litnest.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LitNest</a>
+                <a href="../Design Projects/learnbetter.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LearnBetter</a>
+                <a href="../Design Projects/busbuddy.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">BusBuddy</a>
+
+                <a href="../graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../Graphic Projects/careerserviceposters.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
+                    Service Posters</a>
+                <a href="../Graphic Projects/schoolplacementposters.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">School
+                    Placement Posters</a>
+                <a href="../Graphic Projects/careersfairs.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
+                    Fairs</a>
+                <a href="../Graphic Projects/gems.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">GEMS
+                    Flyer</a>
+                <a href="../Graphic Projects/futureofmuseumsflyers.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Future
+                    of Museums Flyers</a>
+
+                <a href="../3dprints.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">3D
+                    PRINTS</a>
+                <a href="../3D Projects/deskstop.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">DeskStop</a>
+                <a href="../3D Projects/efficensee.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">EfficenSee</a>
+
+                <a href="../coding.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CODING</a>
+                <a href="../Coding Projects/amusingourselvestodeath.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
+                <a href="../Coding Projects/musicianwebsite.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Musician
+                    Website</a>
+                <a href="../Coding Projects/perviousportfolios.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous
+                    Portfolios</a>
+
+                <a href="../aboutme.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ABOUT
+                    ME</a>
+                <a href="../contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-linkedin-square text-3xl text-center" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="https://github.com/annikajun" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-github-square text-3xl text.center" aria-hidden="true"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+<!-- Main content area (flex-grow ensures it takes remaining vertical space) -->
+    <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
+        <!-- Sidebar - visible only on medium and larger screens -->
+        <aside class="hidden sm:block w-full sm:w-1/4 bg-white text-center p-4 rounded-lg mr-4 flex-shrink-0">
+            <nav class="flex flex-col space-y-2">
+                <a href="../design.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">DESIGN</a>
+                <a href="../Design Projects/litnest.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">LitNest</a>
+                <a href="../Design Projects/learnbetter.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">LearnBetter</a>
+                <a href="../Design Projects/busbuddy.html"
+                    class="rounded-md px-3 py-2 text-sm bg-gray-500 text-white transition-colors duration-200">BusBuddy</a>
+
+                <a href="../graphicdesign.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">GRAPHIC DESIGN</a>
+                <a href="../Graphic Projects/careerserviceposters.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers
+                    Service Posters</a>
+                <a href="../Graphic Projects/schoolplacementposters.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">School
+                    Placement Posters</a>
+                <a href="../Graphic Projects/careersfairs.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers
+                    Fairs</a>
+                <a href="../Graphic Projects/gems.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">GEMS
+                    Flyer</a>
+                <a href="../Graphic Projects/futureofmuseumsflyers.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Future
+                    of Museums Flyers</a>
+
+                <a href="../3dprints.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">3D PRINTS</a>
+                <a href="../3D Projects/deskstop.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">DeskStop</a>
+                <a href="../3D Projects/efficensee.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">EfficenSee</a>
+
+                <a href="../coding.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">CODING</a>
+                <a href="../Coding Projects/amusingourselvestodeath.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
+                <a href="../Coding Projects/musicianwebsite.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Musician
+                    Website</a>
+                <a href="../Coding Projects/perviousportfolios.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous
+                    Portfolios</a>
+
+                <a href="../aboutme.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">ABOUT ME</a>
+
+                <a href="../contact.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">CONTACT</a>
+                <div class="flex justify-center">
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:black hover:text-white transition-colors duration-200 ">
+                        <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/annikajun" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200 ">
+                        <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+            </nav>
+        </aside>
+<!-- Project -->
+        <main class="lg:w-3/4 md:w-3/4 sm:w-full bg-white">
+            <div class="p-4">
+                <p class="text-3xl text-center font-medium">BusBuddy</p>
+                <br>
+                    <img src="../images/BusBuddy Thumbnail.png" alt="BusBuddy Thumbnail"
+                        class="object-contain h-auto w-full">
+                <br>
+                <p class="text-justify text-gray-500">
+                    BusBuddy was developed as part of my Design Research in Practice module. Working with a team, we
+                    focused on "Designing for Sustainable and/or Active Travel to Campus." Our project aimed to enhance
+                    the public transport experience for students, making it a more appealing and sustainable travel
+                    option.
+                </p>
+                <br>
+                <p class="text-xl font-medium">What is BusBuddy?</p>
+                <p class="text-justify text-gray-500">
+                    BusBuddy is a mobile application designed to improve the usability of digital products related to public transport and provide a streamlined channel for user feedback. It aims to make bus travel more convenient, transparent, and enjoyable, ultimately encouraging more individuals to choose public transport over private vehicles.
+                </p>
+                <br>
+                <img class="justify-center" src="../images/BusBuddy Use 2.png" alt="BusBuddy Mock Up" class="object-contain rounded-lg h-80 w-2/4">
+                <br>
+                <p class="text-xl font-medium">What problems does it solve?</p>
+                <p class="text-justify text-gray-500">
+                    Our research revealed key pain points for public transport users, particularly concerning communication and feedback. Many users felt there wasn't an effective way to provide feedback to transport providers (TFI). Additionally, the existing digital tools implicated in public transport often lacked intuitive interfaces or comprehensive features.
+                    BusBuddy addresses these issues by providing a clear and easy-to-use platform for users to submit feedback and report issues directly to TFI, improving the overall usability and functionality of public transport-related digital interfaces, making essential information more accessible and offering features that enhance the user experience, such as live tracking, alerts, and detailed information about bus stops and routes.
+                </p>
+                <img class="justify-center" src="../images/BusBuddy Brainstorming.jpg" alt="BusBuddy Brainstorming" class="object-contain rounded-lg h-80 w-2/4">
+                <p class="text-gray-400 text-sm text-center">Sketching ideas for the "Designing for Sustainable and/or Active Travel to Campus" challenge</p>
+                <br>
+                <p class="text-xl font-medium">My reflection on the project</p>
+                <p class="text-justify text-gray-500">
+                    This project reinforced the critical role of thorough research in the design process. By conducting
+                    interviews and observations, we gained invaluable insights into the real struggles and needs of
+                    public transport users. This user-centric approach was fundamental in shaping BusBuddy's features
+                    and ensuring it addressed genuine problems. Collaborating within the team allowed for diverse
+                    perspectives and a richer ideation process, leading to a more robust and user-friendly concept. It
+                    was rewarding to apply the OPN framework to analyze our data, which guided our design decisions and
+                    ensured our solutions were directly tied to user needs.
+                </p>
+                <br>
+                <p class="text-justify">View my complete project, including research and interviews, in the Process Book and Poster below:</p>
+                <div class="flex gap-5">
+                    <a href="../../images/BusBuddy ProcessBook.pdf" target="_blank"
+                        class="flex items-center justify-center px-8 py-3 bg-black hover:bg-gray-500 rounded-lg w-1/3 mt-4 text-white sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">Process
+                        Book</a>
+                    <a href="../../images/BusBuddyPoster.png" target="_blank"
+                        class="flex items-center justify-center px-8 py-3 bg-black hover:bg-gray-500 rounded-lg w-1/3 mt-4 text-white sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">Poster</a>
+                    <a href="https://www.figma.com/design/lA73wUrXmBzh7amKdWR0Cp/BusBuddy?node-id=0-1&t=ehVlXicIk3tgePD8-1"
+                        target="_blank"
+                        class="flex items-center justify-center px-8 py-3 bg-black hover:bg-gray-500 rounded-lg w-1/3 mt-4 text-white sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">Figma</a>
+                </div>
+            </div>
+            <div>
+            </div>
+        </main>
+    </div>
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+<!-- Scroll Up Button - positioned fixed at bottom right -->
+    <div class="fixed bottom-4 right-4 z-50">
+        <a href="#top" class="block">
+            <!-- Icon with Tailwind classes replacing the custom CSS -->
+            <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+    <script src="../sidebar.js"></script>
+</body>
+</html>

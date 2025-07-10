@@ -1,0 +1,279 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="../index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+    <style>
+        .flex-container-wrapper {
+            flex-direction: column;
+            min-height: calc(100vh - 80px);
+            /* Approx height for header (h-16) + footer (py-5) */
+        }
+        @media (min-width: 640px) {
+
+            /* Tailwind's 'sm' breakpoint */
+            .flex-container-wrapper {
+                flex-direction: row;
+            }
+        }
+        main {
+            flex-grow: 1;
+            /* Allows main content to take up available space */
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+
+    <!-- Navigation Bar (Top Header) -->
+    <nav class="bg-white shadow-sm flex-shrink-0">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <!-- Mobile menu button - visible only on small screens -->
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed (hamburger) -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!-- Icon when menu is open (X icon), initially hidden -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Logo - always visible, centered on mobile, left-aligned on desktop -->
+                <div class="flex flex-1 items-center justify-center sm:justify-start pl-12 sm:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="../index.html" class="logo-text"
+                            style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Mobile menu - initially hidden, toggled by JS. Contains all sidebar links. -->
+        <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Main Categories and their Sub-links for mobile dropdown -->
+                <a href="../design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+                    aria-current="page">DESIGN</a>
+                <a href="../Design Projects/litnest.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LitNest</a>
+                <a href="../Design Projects/learnbetter.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LearnBetter</a>
+                <a href="../Design Projects/busbuddy.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">BusBuddy</a>
+
+                <a href="../graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../Graphic Projects/careerserviceposters.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
+                    Service Posters</a>
+                <a href="../Graphic Projects/schoolplacementposters.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">School
+                    Placement Posters</a>
+                <a href="../Graphic Projects/careersfairs.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
+                    Fairs</a>
+                <a href="../Graphic Projects/gems.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">GEMS
+                    Flyer</a>
+                <a href="../Graphic Projects/futureofmuseumsflyers.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Future
+                    of Museums Flyers</a>
+
+                <a href="../3dprints.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">3D
+                    PRINTS</a>
+                <a href="../3D Projects/deskstop.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">DeskStop</a>
+                <a href="../3D Projects/efficensee.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">EfficenSee</a>
+
+                <a href="../coding.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CODING</a>
+                <a href="../Coding Projects/amusingourselvestodeath.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
+                <a href="../Coding Projects/musicianwebsite.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Musician
+                    Website</a>
+                <a href="../Coding Projects/perviousportfolios.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous Portfolios</a> 
+
+                <a href="../aboutme.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ABOUT
+                    ME</a>
+                <a href="../contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-linkedin-square text-3xl text-center" aria-hidden="true"></i> LinkedIn
+                </a>
+                 <a href="https://github.com/annikajun" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-github-square text-3xl text.center" aria-hidden="true"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area (flex-grow ensures it takes remaining vertical space) -->
+    <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
+        <!-- Sidebar - visible only on medium and larger screens -->
+        <aside class="hidden sm:block w-full sm:w-1/4 bg-white text-center p-4 rounded-lg mr-4 flex-shrink-0">
+            <nav class="flex flex-col space-y-2">
+                <a href="../design.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">DESIGN</a>
+                <a href="../Design Projects/litnest.html"
+                    class="rounded-md px-3 py-2 text-sm bg-gray-500 text-white transition-colors duration-200">LitNest</a>
+                <a href="../Design Projects/learnbetter.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">LearnBetter</a>
+                <a href="../Design Projects/busbuddy.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">BusBuddy</a>
+
+                <a href="../graphicdesign.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">GRAPHIC DESIGN</a>
+                <a href="../Graphic Projects/careerserviceposters.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers
+                    Service Posters</a>
+                <a href="../Graphic Projects/schoolplacementposters.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">School
+                    Placement Posters</a>
+                <a href="../Graphic Projects/careersfairs.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers
+                    Fairs</a>
+                <a href="../Graphic Projects/gems.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">GEMS
+                    Flyer</a>
+                <a href="../Graphic Projects/futureofmuseumsflyers.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Future
+                    of Museums Flyers</a>
+
+                <a href="../3dprints.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">3D PRINTS</a>
+                <a href="../3D Projects/deskstop.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">DeskStop</a>
+                <a href="../3D Projects/efficensee.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">EfficenSee</a>
+
+                <a href="../coding.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">CODING</a>
+                <a href="../Coding Projects/amusingourselvestodeath.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
+                <a href="../Coding Projects/musicianwebsite.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Musician
+                    Website</a>
+                <a href="../Coding Projects/perviousportfolios.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous Portfolios</a> 
+
+                <a href="../aboutme.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">ABOUT ME</a>
+
+                <a href="../contact.html"
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">CONTACT</a>
+                    <div class="flex justify-center">
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
+                    class="w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:black hover:text-white transition-colors duration-200 ">
+                    <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/annikajun" target="_blank"
+                    class="w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200 ">
+                    <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
+                </a>    
+                    </div>
+                
+            </nav>
+        </aside>
+        <!-- Project -->
+        <main class="lg:w-3/4 md:w-3/4 sm:w-full bg-white">
+             <div class="p-4">
+                <p class="text-3xl text-center font-medium"> LitNest </p>
+                <br>
+                <img src="../images/LitNest Thumbnail.png" alt="LitNest Thumbnail" class="object-contain rounded-lg  h-auto w-full">
+                <br>
+                <p class="text-justify text-gray-500"> LitNest was designed for my Mobile Application Design module. I worked with a group to research and understand the reading tracking behaviour of reading enthusiasts. </p>
+                <br>
+                <p class="text-xl font-medium">What is LitNest? </p>
+                <p class="text-justify text-gray-500">LitNest is a new book tracking and book "buddy" app designed to be an alternative to existing social cataloging applications like Goodreads and StoryGraph. Its purpose is to help users track their reading activity and make it more enjoyable and collaborative. The app's name, LitNest, combines "Literary" and "Nest," reflecting its function as a place for readers to collect and organise their books. </p>
+                <br>
+                <img src="../images/LitNest Ad.png" alt="LitNest Thumbnail" class="object-contain h-auto w-full">
+                <br>
+                <p class="text-xl font-medium">What problems does it solve?</p>
+                <p class="text-justify text-gray-500">LitNest addresses critical usability challenges identified in popular reading applications like Goodreads and StoryGraph. We recognised that StoryGraph's user interface was often plain and counterintuitive, making navigation difficult for users. LitNest solves this by focusing on intuitive design, visually appealing interfaces, and improved app responsiveness, making features easily discoverable. Furthermore, Goodreads presented issues with inconsistent design elements and difficulties in finding certain functionalities, such as searching for users or messaging shortcuts. LitNest offers a seamless and consistent user experience throughout the app. A significant problem we tackled was the challenging process of initiating and adding users to "Buddy Reads" in StoryGraph, where the option was often hidden and adding users required precise usernames without visual confirmation. LitNest simplifies this entire process, making collaborative reading accessible and engaging for all users.</p>
+                <br>
+                 <div class="relative w-full overflow-hidden">
+            <video
+                controls autoplay loop muted playsinline poster="../images/LitNest Recording.mp4" class="w-full h-auto">
+                <source src="../images/LitNest Recording.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                <a href="../../images/LitNest Recording.mp4">Download the video</a> instead.
+            </video>
+        </div>
+        <br>
+                <p class="text-xl font-medium">What advantages does it give the user?</p>
+                <p class="text-justify text-gray-500">LitNest provides users with several significant advantages, fostering a more engaging and efficient reading experience. It greatly enhances community and social interaction through seamless "Buddy Reads," which include unique spoiler-preventing, page-specific comments, allowing readers to share insights and discuss books without ruining plot twists. The app also offers opportunities to connect with other readers through a vibrant community feed and direct messaging. Users benefit from personalised book recommendations and efficient book tracking, enabling them to easily log and rate books, mark them as 'want to read,' 'reading,' or 'read.' A standout feature is the local book exchange option, which empowers users to save money and explore diverse genres by trading books within their local area. We emphasised creating an intuitive and visually appealing interface, ensuring clear system status visibility, helpful error recovery features, and diverse, interactive app frames. A centralised navigation bar ensures easy access to all features, contributing to a coherent, consistent, and highly user-friendly experience that actively promotes engagement and satisfaction.</p>
+                <br>
+                <p class="text-justify">View my complete project below:</p>
+                <div class="flex gap-5">
+            <a href="https://www.figma.com/design/RTeS8M7Q7trGxlqDGibNQz/LitNest?node-id=0-1&t=EbjW2DtpGoGYOB9J-1" target="_blank"
+        class="flex items-center justify-center px-8 py-3 bg-black hover:bg-gray-500 rounded-lg w-1/4 mt-4 text-white sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">Figma </a>
+        <a href="../../images/LitNest Report.pdf" target="_blank"
+        class="flex items-center justify-center px-8 py-3 bg-black hover:bg-gray-500 rounded-lg w-1/4 mt-4 text-white sm:text-base whitespace-nowrap overflow-hidden text-ellipsis">Report </a>
+             </div>
+             </div>
+             <div>
+               
+            </div>
+         
+         
+        </main>
+    </div>
+
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+
+    <!-- Scroll Up Button - positioned fixed at bottom right -->
+    <div class="fixed bottom-4 right-4 z-50">
+       
+        <a href="#top" class="block">
+            <!-- Icon with Tailwind classes replacing the custom CSS -->
+            <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+
+
+    <script src="../sidebar.js"></script>
+
+</body>
+
+</html>

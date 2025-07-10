@@ -1,0 +1,158 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+</head>
+
+<body>
+    <nav class="white">
+        <div class="mx-auto max-w-8xl px-2 md:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                    <!-- Mobile menu button, now with an ID for JavaScript -->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed, now with an ID -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!-- Icon when menu is open, initially hidden, now with an ID -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-between md:items-stretch pl-12 md:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="index.html" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA </a>
+                    </div>
+                    <div class="hidden md:ml-6 md:block">
+                        <div class="flex">
+                            <a href="design.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"
+                                aria-current="page">DESIGN</a>
+                            <a href="graphicdesign.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">GRAPHIC
+                                DESIGN</a>
+                            <a href="3dprints.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">3D
+                                PRINTS</a>
+                            <a href="coding.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CODING</a>
+                            <a href="aboutme.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">ABOUT ME</a>
+                            <a href="contact.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CONTACT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Mobile menu, now with 'hidden' class by default -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white"
+                    aria-current="page">DESIGN</a>
+                <a href="graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">GRAPHIC
+                    DESIGN</a>
+                <a href="3dprints.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">3D
+                    PRINTS</a>
+                <a href="coding.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CODING</a>
+                <a href="aboutme.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">ABOUT ME</a>
+                <a href="contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+    <!--Main Content-->
+    <div class="grid lg:grid-cols-2 lg:grid-rows-2 md:grid-cols-2 md:grid-rows-2 gap-5 p-4">
+        <div class="relative w-full pb-[56.25%] group">
+            <a href="Design Projects/litnest.html" class="top absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
+                <img src="images/LitNest Ad.png" alt="LitNest"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                 <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
+                        <p class="text-black text-3xl">LitNest</p>
+                        <p class="text-gray-600 text-lg mt-2 text-center px-4">UI/UX Design & Prototyping</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="relative w-full pb-[56.25%] group">
+            <a href="Graphic Projects/careerserviceposters.html" class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
+                <img src="images/Career Service Posters/CareersFairThumbnail.png" alt="Careers Service Posters"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                 <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
+                        <p class="text-black text-3xl">Careers Service</p>
+                        <p class="text-gray-600 text-lg mt-2 text-center px-4">Branding and Marketing Collateral</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+         <div class="relative w-full pb-[56.25%] group">
+            <a href="3D Projects/deskstop.html" class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
+                <img src="images/DeskStop/Desktop_Render.png" alt="DeskStop"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                 <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
+                        <p class="text-black text-3xl">DeskStop</p>
+                        <p class="text-gray-600 text-lg mt-2 text-center px-4">Live Bus Tracker Prototype</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+       <div class="relative w-full pb-[56.25%] group">
+            <a href="Coding Projects/amusingourselvestodeath.html" class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
+                <img src="images/AOTD MaxPatch.png" alt="Amusing Ourselves to Death"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                 <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
+                        <p class="text-black text-3xl">Amusing Ourselves to Death</p>
+                        <p class="text-gray-600 text-lg mt-2 text-center px-4">Max/MSP & Arduino Installation</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+
+ <!-- Scroll Up Button - positioned fixed at bottom right -->
+    <div class="fixed bottom-4 right-4 z-50">
+       
+        <a href="#top" class="block">
+            <!-- Icon with Tailwind classes replacing the custom CSS -->
+            <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>
