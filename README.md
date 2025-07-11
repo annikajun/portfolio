@@ -58,7 +58,7 @@
 ## About The Project
 
 
-<img src="PortfolioScreenshot.png" alt="Logo" width="100" height="100">
+<img src="/images/PortfolioScreenshot.png" alt="Logo" width="100" height="100">
 
 This portfolio website was created to highlight my most recent design work as a final year student in Interaction Design. The project represents my continued growth as a designer and developer, featuring design processes, and interactive elements that reflect my strengths in both UX thinking and visual storytelling.
 
