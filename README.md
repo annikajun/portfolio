@@ -23,7 +23,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/annikajun/portfolio" target="_blank">
+  <a href="https://github.com/annikajun/" target="_blank">
     <img src="images/About.png" alt="Logo" width="100" height="100">
   </a>
 
