@@ -24,7 +24,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/annikajun/portfolio">
-    <img src="imgages/About.png" alt="Logo" width="100" height="100">
+    <img src="images/About.png" alt="Logo" width="100" height="100">
   </a>
 
 <h3 align="center">Annika's Portfolio 2025</h3>
