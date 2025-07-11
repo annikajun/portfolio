@@ -57,8 +57,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
-<img src="/images/PortfolioScreenshot.png" alt="Logo" width="100" height="100">
+[![Potfoilo Image][product-screenshot]](https://annikajun.github.io/portfolio)
 
 This portfolio website was created to highlight my most recent design work as a final year student in Interaction Design. The project represents my continued growth as a designer and developer, featuring design processes, and interactive elements that reflect my strengths in both UX thinking and visual storytelling.
 
@@ -86,6 +85,11 @@ Project Link: [https://github.com/annikajun/portfolio](https://github.com/annika
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
+[product-screenshot]: images/PortfolioScreenshot.png
+
+[Tailwind]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwind-url]: https://tailwindcss.com/
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/annika-jungfleisch
 
@@ -97,6 +101,3 @@ Project Link: [https://github.com/annikajun/portfolio](https://github.com/annika
 
 [JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-
-[Tailwind]: 
-[Tailwind-url]: https://tailwindcss.com/
