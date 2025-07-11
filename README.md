@@ -61,7 +61,7 @@
 
 This portfolio website was created to highlight my most recent design work as a final year student in Interaction Design. The project represents my continued growth as a designer and developer, featuring design processes, and interactive elements that reflect my strengths in both UX thinking and visual storytelling.
 
-It is a fully responsive website built with HTML, CSS, and JavaScript, emphasising clean design, performance, and accessibility. This site is the evolution of my [2023 portfolio](https://github.com/annikajun/Portfolio_2023), with a refined structure, updated projects, and a more personal tone.
+It is a fully responsive website built with HTML, CSS, and JavaScript, emphasising clean design, performance, and accessibility. This site is the evolution of my [2023 portfolio](https://github.com/annikajun/Portfolio_2023), with a further refined structure, updated projects, and a more personal tone.
 
 ### Built With
 
@@ -88,16 +88,16 @@ Project Link: [https://github.com/annikajun/portfolio](https://github.com/annika
 [product-screenshot]: images/PortfolioScreenshot.png
 
 [Tailwind]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
-[Tailwind-url]: https://tailwindcss.com/{:target="_blank"}
+[Tailwind-url]: https://tailwindcss.com/
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/annika-jungfleisch/{:target="_blank"}
+[linkedin-url]: https://linkedin.com/in/annika-jungfleisch/
 
 [HTML5]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
-[HTML5-url]: https://developer.mozilla.org/en-US/docs/Web/HTML/{:target="_blank"}
+[HTML5-url]: https://developer.mozilla.org/en-US/docs/Web/HTML/
 
 [CSS3]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-[CSS3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS/{:target="_blank"}
+[CSS3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS/
 
 [JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
-[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/{:target="_blank"}
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/
