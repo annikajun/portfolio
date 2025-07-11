@@ -88,16 +88,16 @@ Project Link: [https://github.com/annikajun/portfolio](https://github.com/annika
 [product-screenshot]: images/PortfolioScreenshot.png
 
 [Tailwind]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
-[Tailwind-url]: https://tailwindcss.com/
+[Tailwind-url]: https://tailwindcss.com/{:target="_blank"}
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/annika-jungfleisch/
+[linkedin-url]: https://linkedin.com/in/annika-jungfleisch/{:target="_blank"}
 
 [HTML5]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
-[HTML5-url]: https://developer.mozilla.org/en-US/docs/Web/HTML/
+[HTML5-url]: https://developer.mozilla.org/en-US/docs/Web/HTML/{:target="_blank"}
 
 [CSS3]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-[CSS3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS/
+[CSS3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS/{:target="_blank"}
 
 [JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
-[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/{:target="_blank"}
