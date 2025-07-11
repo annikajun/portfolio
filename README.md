@@ -61,7 +61,7 @@
 
 This portfolio website was created to highlight my most recent design work as a final year student in Interaction Design. The project represents my continued growth as a designer and developer, featuring design processes, and interactive elements that reflect my strengths in both UX thinking and visual storytelling.
 
-It is a fully responsive website built with HTML, CSS, and JavaScript, emphasising clean design, performance, and accessibility. This site is the evolution of my 2023 portfolio, with a refined structure, updated projects, and a more personal tone.
+It is a fully responsive website built with HTML, CSS, and JavaScript, emphasising clean design, performance, and accessibility. This site is the evolution of my [2023 portfolio](https://github.com/annikajun/Portfolio_2023), with a refined structure, updated projects, and a more personal tone.
 
 ### Built With
 
