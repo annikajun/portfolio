@@ -24,7 +24,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/annikajun/" target="_blank">
-    <img src="images/About.png" alt="Logo" width="100" height="100">
+    <img src="images/About.webp" alt="Logo" width="100" height="100">
   </a>
 
 <h3 align="center">Annika's Portfolio 2025</h3>
@@ -85,7 +85,7 @@ Project Link: [https://github.com/annikajun/portfolio](https://github.com/annika
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[product-screenshot]: images/PortfolioScreenshot.png
+[product-screenshot]: images/PortfolioScreenshot.webp
 
 [Tailwind]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
