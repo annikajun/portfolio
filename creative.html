@@ -15,18 +15,14 @@
         .flex-container-wrapper {
             flex-direction: column;
             min-height: calc(100vh - 80px);
-            /* Approx height for header (h-16) + footer (py-5) */
         }
         @media (min-width: 640px) {
-
-            /* Tailwind's 'sm' breakpoint */
             .flex-container-wrapper {
                 flex-direction: row;
             }
         }
         main {
             flex-grow: 1;
-            /* Allows main content to take up available space */
         }
     </style>
 </head>
@@ -37,20 +33,17 @@
     <nav class="top bg-white shadow-sm flex-shrink-0">
         <div class="mx-auto max-w-8xl px-2 sm:px-6">
             <div class="relative flex h-16 items-center justify-between">
-                <!-- Mobile menu button - visible only on small screens -->
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                     <button type="button"
                         class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
                         aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
                         <span class="absolute -inset-0.5"></span>
                         <span class="sr-only">Open main menu</span>
-                        <!-- Icon when menu is closed (hamburger) -->
                         <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
-                        <!-- Icon when menu is open (X icon), initially hidden -->
                         <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -58,7 +51,6 @@
                     </button>
                 </div>
 
-                <!-- Logo - always visible, centered on mobile, left-aligned on desktop -->
                 <div class="flex flex-1 items-center justify-center sm:justify-start pl-12 sm:pl-0">
                     <div class="flex shrink-0 text-black text-2xl">
                         <a href="index.html" class="logo-text"
@@ -67,13 +59,12 @@
                 </div>
             </div>
         </div>
-  <!-- Mobile menu - initially hidden, toggled by JS. Contains all sidebar links. -->
+
+        <!-- Mobile menu -->
         <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
             <div class="space-y-1 px-2 pt-2 pb-3">
-                <!-- Main Categories and their Sub-links for mobile dropdown -->
                 <a href="design.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
-                    aria-current="page">DESIGN</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">DESIGN</a>
                 <a href="Design Projects/litnest.html"
                     class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LitNest</a>
                 <a href="Design Projects/learnbetter.html"
@@ -82,27 +73,20 @@
                     class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">BusBuddy</a>
 
                 <a href="graphicdesign.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
-                    DESIGN</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC DESIGN</a>
                 <a href="Graphic Projects/careerserviceposters.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
-                    Service Posters</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers Service Posters</a>
                 <a href="Graphic Projects/schoolplacementposters.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">School
-                    Placement Posters</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">School Placement Posters</a>
                 <a href="Graphic Projects/careersfairs.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
-                    Fairs</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers Fairs</a>
                 <a href="Graphic Projects/gems.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">GEMS
-                    Flyer</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">GEMS Flyer</a>
                 <a href="Graphic Projects/futureofmuseumsflyers.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Future
-                    of Museums Flyers</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Future of Museums Flyers</a>
 
                 <a href="3dprints.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">3D
-                    PRINTS</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">3D PRINTS</a>
                 <a href="3D Projects/deskstop.html"
                     class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">DeskStop</a>
                 <a href="3D Projects/efficensee.html"
@@ -111,11 +95,9 @@
                 <a href="coding.html"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CODING</a>
                 <a href="Coding Projects/amusingourselvestodeath.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing
-                    Ourselves to Death</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing Ourselves to Death</a>
                 <a href="Coding Projects/musicianwebsite.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Musician
-                    Website</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Musician Website</a>
                 <a href="Coding Projects/perviousportfolios.html"
                     class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous Portfolios</a>
                 <a href="../Coding Projects/vrgame.html"
@@ -128,30 +110,28 @@
                     class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">ViperRing</a>
 
                 <a href="aboutme.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ABOUT
-                    ME</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ABOUT ME</a>
                 <a href="contact.html"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
                 <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
                     <i class="fa fa-linkedin-square text-3xl text-center" aria-hidden="true"></i> LinkedIn
                 </a>
-                 <a href="https://github.com/annikajun" target="_blank"
+                <a href="https://github.com/annikajun" target="_blank"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
-                    <i class="fa fa-github-square text-3xl text.center" aria-hidden="true"></i> GitHub
+                    <i class="fa fa-github-square text-3xl" aria-hidden="true"></i> GitHub
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Main content area (flex-grow ensures it takes remaining vertical space) -->
+    <!-- Main content area -->
     <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
-        <!-- Sidebar - visible only on medium and larger screens -->
+        <!-- Sidebar -->
         <aside class="hidden sm:block w-full sm:w-1/4 bg-gray-100 text-center p-4 rounded-lg shadow-lg mr-4 flex-shrink-0">
             <nav class="flex flex-col space-y-2">
                 <a href="design.html"
-                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
-                    aria-current="page">DESIGN</a>
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">DESIGN</a>
                 <a href="Design Projects/litnest.html"
                     class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LitNest</a>
                 <a href="Design Projects/learnbetter.html"
@@ -160,43 +140,34 @@
                     class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">BusBuddy</a>
 
                 <a href="graphicdesign.html"
-                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
-                    aria-current="page">GRAPHIC DESIGN</a>
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC DESIGN</a>
                 <a href="Graphic Projects/careerserviceposters.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
-                    Service Posters</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers Service Posters</a>
                 <a href="Graphic Projects/schoolplacementposters.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">School
-                    Placement Posters</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">School Placement Posters</a>
                 <a href="Graphic Projects/careersfairs.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
-                    Fairs</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers Fairs</a>
                 <a href="Graphic Projects/gems.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">GEMS
-                    Flyer</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">GEMS Flyer</a>
                 <a href="Graphic Projects/futureofmuseumsflyers.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Future
-                    of Museums Flyers</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Future of Museums Flyers</a>
 
                 <a href="3dprints.html"
-                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
-                    aria-current="page">3D PRINTS</a>
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">3D PRINTS</a>
                 <a href="3D Projects/deskstop.html"
                     class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">DeskStop</a>
                 <a href="3D Projects/efficensee.html"
                     class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">EfficenSee</a>
 
                 <a href="coding.html"
-                    class="rounded-md px-3 py-2 text-md font-bold bg-gray-700 text-white transition-colors duration-200"
-                    aria-current="page">CODING</a>
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CODING</a>
                 <a href="Coding Projects/amusingourselvestodeath.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing
-                    Ourselves to Death</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing Ourselves to Death</a>
                 <a href="Coding Projects/musicianwebsite.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Musician
-                    Website</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Musician Website</a>
                 <a href="Coding Projects/perviousportfolios.html"
                     class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous Portfolios</a>
+
                 <a href="../Coding Projects/vrgame.html"
                 class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">VR Game</a>
 
@@ -206,69 +177,74 @@
                     class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Clay Dragon</a>
                 <a href="../Creative Projects/viperring.html"
                     class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">ViperRing</a>
-                <a href="aboutme.html"
-                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
-                    aria-current="page">ABOUT ME</a>
 
+                <a href="aboutme.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ABOUT ME</a>
                 <a href="contact.html"
-                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
-                    aria-current="page">CONTACT</a>
-                    <div class="flex justify-center">
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <div class="flex justify-center">
                     <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
-                    class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white hover:text-black transition-colors duration-200 ">
-                    <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
-                </a>
-                <a href="https://github.com/annikajun" target="_blank"
-                    class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200 ">
-                    <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
-                </a>    
-                    </div>
-                
+                        class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/annikajun" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                </div>
             </nav>
         </aside>
-   
-        <!-- Project -->
+
+        <!-- Projects Grid -->
         <main class="lg:w-3/4 md:w-3/4 sm:w-full bg-white">
-             <div class="grid lg:grid-cols-2 lg:grid-rows-3 md:grid-cols-2 md:grid-rows-2 gap-2 p-4">
-          <div class="relative w-full pb-[56.25%] group">
-            <a href="Coding Projects/amusingourselvestodeath.html"
-                class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg">
-                <img src="images/AOTD MaxPatch.webp" alt="Amusing Ourselves to Death Thumbnail"
-                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
-                        <p class="text-black text-3xl">Amusing Ourselves to Death</p>
-                         <p class="text-gray-600 text-lg mt-2 text-center px-4">Max/MSP & Arduino Installation</p>
-                    </div>
+            <div class="grid lg:grid-cols-2 md:grid-cols-2 gap-2 p-4">
+
+                <!-- Clay Dragon -->
+                <div class="relative w-full pb-[56.25%] group">
+                    <a href="Creative Projects/claydragon.html"
+                        class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-200">
+                        <img src="images/ClayDragon/ClayDragonThumbnail.webp" alt="Clay Dragon"
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                                <p class="text-black text-3xl">Clay Dragon</p>
+                                <p class="text-gray-600 text-lg mt-2 text-center px-4">Sculptural Stop-Motion Model</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="relative w-full pb-[56.25%] group">
-            <a href="Coding Projects/musicianwebsite.html"
-                class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg">
-                <img src="images/Musician Website copy.webp" alt="Musician Website Thumbnail"
-                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
-                        <p class="text-black text-3xl">Musician Website</p>
-                         <p class="text-gray-600 text-lg mt-2 text-center px-4">Foundational Web Development </p>
-                    </div>
+
+                <!-- ViperRing AI Multimedia -->
+                <div class="relative w-full pb-[56.25%] group">
+                    <a href="Creative Projects/viperring.html"
+                        class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-200">
+                        <img src="images/ViperRing/ViperRingThumbnail.webp" alt="ViperRing AI Multimedia"
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                                <p class="text-black text-3xl">ViperRing</p>
+                                <p class="text-gray-600 text-lg mt-2 text-center px-4">AI Multimedia Project</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-         <div class="relative w-full pb-[56.25%] group">
-            <a href="Coding Projects/perviousportfolios.html"
-                class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg">
-                <img src="images/portfolio 2023 home.webp" alt="Previous Portfolios Thumbnail"
-                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
-                        <p class="text-black text-3xl">Previous Portfolios</p>
-                         <p class="text-gray-600 text-lg mt-2 text-center px-4">Curated Design Portfolio</p>
-                    </div>
+
+                <!-- VR Game -->
+                <div class="relative w-full pb-[56.25%] group">
+                    <a href="Creative Projects/vrgame.html"
+                        class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-200">
+                        <img src="images/VRGame/VRGameThumbnail.webp" alt="VR Game"
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                                <p class="text-black text-3xl">VR Game</p>
+                                <p class="text-gray-600 text-lg mt-2 text-center px-4">Virtual Reality Experience</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
+
+            </div>
         </main>
     </div>
 
@@ -276,18 +252,12 @@
         <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
     </footer>
 
-    <!-- Scroll Up Button - positioned fixed at bottom right -->
     <div class="fixed bottom-4 right-4 z-50">
-       
         <a href="#top" class="block">
-            <!-- Icon with Tailwind classes replacing the custom CSS -->
             <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
         </a>
     </div>
 
-
     <script src="sidebar.js"></script>
-
 </body>
-
 </html>
