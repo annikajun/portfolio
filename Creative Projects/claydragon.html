@@ -15,14 +15,18 @@
         .flex-container-wrapper {
             flex-direction: column;
             min-height: calc(100vh - 80px);
+            /* Approx height for header (h-16) + footer (py-5) */
         }
         @media (min-width: 640px) {
+
+            /* Tailwind's 'sm' breakpoint */
             .flex-container-wrapper {
                 flex-direction: row;
             }
         }
         main {
             flex-grow: 1;
+            /* Allows main content to take up available space */
         }
     </style>
 </head>
@@ -56,12 +60,11 @@
                 </div>
             </div>
         </div>
-
-        <!-- Mobile menu -->
         <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
             <div class="space-y-1 px-2 pt-2 pb-3">
                 <a href="../design.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">DESIGN</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+                    aria-current="page">DESIGN</a>
                 <a href="../Design Projects/litnest.html"
                     class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">LitNest</a>
                 <a href="../Design Projects/learnbetter.html"
@@ -70,20 +73,27 @@
                     class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">BusBuddy</a>
 
                 <a href="../graphicdesign.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC DESIGN</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
                 <a href="../Graphic Projects/careerserviceposters.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers Service Posters</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
+                    Service Posters</a>
                 <a href="../Graphic Projects/schoolplacementposters.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">School Placement Posters</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">School
+                    Placement Posters</a>
                 <a href="../Graphic Projects/careersfairs.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers Fairs</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Careers
+                    Fairs</a>
                 <a href="../Graphic Projects/gems.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">GEMS Flyer</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">GEMS
+                    Flyer</a>
                 <a href="../Graphic Projects/futureofmuseumsflyers.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Future of Museums Flyers</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Future
+                    of Museums Flyers</a>
 
                 <a href="../3dprints.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">3D PRINTS</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">3D
+                    PRINTS</a>
                 <a href="../3D Projects/deskstop.html"
                     class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">DeskStop</a>
                 <a href="../3D Projects/efficensee.html"
@@ -92,14 +102,17 @@
                 <a href="../coding.html"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CODING</a>
                 <a href="../Coding Projects/amusingourselvestodeath.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing Ourselves to Death</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
                 <a href="../Coding Projects/musicianwebsite.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Musician Website</a>
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Musician
+                    Website</a>
                 <a href="../Coding Projects/perviousportfolios.html"
-                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous Portfolios</a>
-
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Previous
+                    Portfolios</a>
                 <a href="../Coding Projects/vrgame.html"
                     class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">VR Game</a>
+                
                 <a href="../creative.html"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CREATIVE</a>
                 <a href="../Creative Projects/claydragon.html"
@@ -108,7 +121,8 @@
                     class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">ViperRing</a>
 
                 <a href="../aboutme.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ABOUT ME</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ABOUT
+                    ME</a>
                 <a href="../contact.html"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
                 <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
@@ -117,18 +131,18 @@
                 </a>
                 <a href="https://github.com/annikajun" target="_blank"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
-                    <i class="fa fa-github-square text-3xl" aria-hidden="true"></i> GitHub
+                    <i class="fa fa-github-square text-3xl text.center" aria-hidden="true"></i> GitHub
                 </a>
             </div>
         </div>
     </nav>
 
     <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
-        <!-- Sidebar -->
         <aside class="hidden sm:block w-full sm:w-1/4 bg-white text-center p-4 rounded-lg mr-4 flex-shrink-0">
             <nav class="flex flex-col space-y-2">
                 <a href="../design.html"
-                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200">DESIGN</a>
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">DESIGN</a>
                 <a href="../Design Projects/litnest.html"
                     class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">LitNest</a>
                 <a href="../Design Projects/learnbetter.html"
@@ -137,162 +151,136 @@
                     class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">BusBuddy</a>
 
                 <a href="../graphicdesign.html"
-                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200">GRAPHIC DESIGN</a>
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">GRAPHIC DESIGN</a>
                 <a href="../Graphic Projects/careerserviceposters.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers Service Posters</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers
+                    Service Posters</a>
                 <a href="../Graphic Projects/schoolplacementposters.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">School Placement Posters</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">School
+                    Placement Posters</a>
                 <a href="../Graphic Projects/careersfairs.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers Fairs</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Careers
+                    Fairs</a>
                 <a href="../Graphic Projects/gems.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">GEMS Flyer</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">GEMS
+                    Flyer</a>
                 <a href="../Graphic Projects/futureofmuseumsflyers.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Future of Museums Flyers</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Future
+                    of Museums Flyers</a>
 
                 <a href="../3dprints.html"
-                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200">3D PRINTS</a>
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">3D PRINTS</a>
                 <a href="../3D Projects/deskstop.html"
                     class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">DeskStop</a>
                 <a href="../3D Projects/efficensee.html"
                     class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">EfficenSee</a>
 
                 <a href="../coding.html"
-                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200">CODING</a>
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">CODING</a>
                 <a href="../Coding Projects/amusingourselvestodeath.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Amusing Ourselves to Death</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
                 <a href="../Coding Projects/musicianwebsite.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Musician Website</a>
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Musician
+                    Website</a>
                 <a href="../Coding Projects/perviousportfolios.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Previous Portfolios</a>
-
+                    class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">Previous
+                    Portfolios</a>
                 <a href="../Coding Projects/vrgame.html"
                 class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">VR Game</a>
 
                 <a href="../creative.html"
                     class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-gray-700 hover:text-white transition-colors duration-200">CREATIVE</a>
                 <a href="../Creative Projects/claydragon.html"
-                    class="rounded-md px-3 py-2 text-sm text-gray-500 bg-gray-500 text-white transition-colors duration-200">Clay Dragon</a>
+                    class="rounded-md px-3 py-2 text-sm bg-gray-500 text-white transition-colors duration-200">Clay Dragon</a>
                 <a href="../Creative Projects/viperring.html"
                     class="rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-500 hover:text-white transition-colors duration-200">ViperRing</a>
-
+                
                 <a href="../aboutme.html"
-                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200">ABOUT ME</a>
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">ABOUT ME</a>
+
                 <a href="../contact.html"
-                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200">CONTACT</a>
+                    class="rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200"
+                    aria-current="page">CONTACT</a>
                 <div class="flex justify-center">
                     <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
-                        class="w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200">
+                        class="w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:black hover:text-white transition-colors duration-200 ">
                         <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
                     </a>
                     <a href="https://github.com/annikajun" target="_blank"
-                        class="w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200">
+                        class="w-15 rounded-md px-3 py-2 text-md text-black font-bold hover:bg-black hover:text-white transition-colors duration-200 ">
                         <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
                     </a>
                 </div>
+
             </nav>
         </aside>
 
-        <!-- Main Content -->
         <main class="lg:w-3/4 md:w-3/4 sm:w-full bg-white">
             <div class="p-4">
-
                 <p class="text-3xl text-center font-medium">Clay Dragon</p>
                 <br>
-
-                <!-- Intro -->
                 <p class="text-justify text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    For this assignment, I was tasked with designing and creating an object of my choice using clay. 
+                    The goal was to create a functional and aesthetically pleasing model while exploring textures and shapes. 
+                    I focused on a dragon-inspired design, paying special attention to the detailing of the scales and posture.
                 </p>
                 <br>
 
-                <!-- Hero image -->
-                <img class="w-full h-auto rounded-lg" src="../images/ClayDragon/ClayDragonHero.webp" alt="Clay Dragon hero image">
-                <p class="text-center text-md text-gray-500 mt-2">ADD IMAGE CAPTION HERE</p>
-                <br>
-
-                <!-- Download / Link buttons -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    <a href="#"
-                        class="min-w-0 flex items-center justify-center px-4 py-3 bg-black hover:bg-gray-700 rounded-lg text-white text-xs sm:text-sm lg:text-base font-medium whitespace-nowrap overflow-hidden text-ellipsis transition-colors duration-200">
-                        <i class="fa fa-link mr-2"></i> ADD LINK LABEL HERE
-                    </a>
-                    <a href="#"
-                        class="min-w-0 flex items-center justify-center px-4 py-3 bg-black hover:bg-gray-700 rounded-lg text-white text-xs sm:text-sm lg:text-base font-medium whitespace-nowrap overflow-hidden text-ellipsis transition-colors duration-200">
-                        <i class="fa fa-link mr-2"></i> ADD LINK LABEL HERE
-                    </a>
-                </div>
-
-                <!-- Section 1 -->
-                <p class="text-2xl font-medium">ADD SECTION HEADING HERE</p>
-                <br>
-                <p class="text-justify text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <img class="object-contain justify-center md:h-130 w-full" src="../images/Dragon/clay1.jpg" alt="Clay Dragon Main View">
+                <p class="text-center text-md text-gray-500 mt-2">
+                    Early-stage modeling and establishing the primary form
                 </p>
                 <br>
 
-                <!-- 2-column image row -->
+                <p class="text-2xl font-medium">Process & Sculpting</p>
+                <p class="text-justify text-gray-500">
+                    The sculpting process began with a wire and foil armature to test the design and balance before moving onto adding the bulk of the clay. 
+                    Through careful shaping, key details like the wings and facial structure were added. This iterative process allowed me to refine the overall look.
+                </p>
+                <br>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <img class="w-full h-auto object-cover rounded-lg" src="../images/ClayDragon/ClayDragonImage1.webp" alt="ADD ALT TEXT">
-                        <p class="text-center text-md text-gray-500 mt-2">ADD IMAGE CAPTION HERE</p>
+                        <img class="justify-center object-contain md:h-120 w-full" src="../images/Dragon/clay2.jpg" alt="Clay Dragon Detail 1">
+                        <p class="text-center text-md text-gray-500 mt-2">
+                            Work in Progress detail view
+                        </p>
                     </div>
                     <div>
-                        <img class="w-full h-auto object-cover rounded-lg" src="../images/ClayDragon/ClayDragonImage2.webp" alt="ADD ALT TEXT">
-                        <p class="text-center text-md text-gray-500 mt-2">ADD IMAGE CAPTION HERE</p>
+                        <img class="justify-center object-contain md:h-120 w-full" src="../images/Dragon/clay3.jpg" alt="Clay Dragon Detail 2">
+                        <p class="text-center text-md text-gray-500 mt-2">
+                            Texture and scale detailing
+                        </p>
                     </div>
                 </div>
                 <br>
 
-                <!-- Section 2 -->
-                <p class="text-2xl font-medium">ADD SECTION HEADING HERE</p>
-                <br>
+                <p class="text-2xl font-medium">Finishing Touches</p>
                 <p class="text-justify text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    After the clay was fully shaped and baked, the piece was painted and sealed. The final model successfully achieves the initial design goals, 
+                    showcasing an expressive pose and intricate textures.
                 </p>
                 <br>
 
-                <!-- Full-width image -->
-                <img class="w-full h-auto rounded-lg" src="../images/ClayDragon/ClayDragonImage3.webp" alt="ADD ALT TEXT">
-                <p class="text-center text-md text-gray-500 mt-2">ADD IMAGE CAPTION HERE</p>
-                <br>
-
-                <!-- 3-column image row -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <img class="w-full h-auto object-cover rounded-lg" src="../images/ClayDragon/ClayDragonImage4.webp" alt="ADD ALT TEXT">
-                        <p class="text-center text-md text-gray-500 mt-2">ADD IMAGE CAPTION HERE</p>
+                        <img class="justify-center object-contain md:h-120 w-full" src="../images/Dragon/clay4.jpg" alt="Clay Dragon Final Profile">
+                        <p class="text-center text-md text-gray-500 mt-2">
+                            Profile view of the finished piece
+                        </p>
                     </div>
                     <div>
-                        <img class="w-full h-auto object-cover rounded-lg" src="../images/ClayDragon/ClayDragonImage5.webp" alt="ADD ALT TEXT">
-                        <p class="text-center text-md text-gray-500 mt-2">ADD IMAGE CAPTION HERE</p>
-                    </div>
-                    <div>
-                        <img class="w-full h-auto object-cover rounded-lg" src="../images/ClayDragon/ClayDragonImage6.webp" alt="ADD ALT TEXT">
-                        <p class="text-center text-md text-gray-500 mt-2">ADD IMAGE CAPTION HERE</p>
+                        <img class="justify-center object-contain md:h-120 w-full" src="../images/Dragon/clay5.jpg" alt="Clay Dragon Additional View">
+                        <p class="text-center text-md text-gray-500 mt-2">
+                            Alternate angle of the finished piece
+                        </p>
                     </div>
                 </div>
-                <br>
-
-                <!-- Section 3 -->
-                <p class="text-2xl font-medium">ADD SECTION HEADING HERE</p>
-                <br>
-                <p class="text-justify text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                <br>
-
-                <!-- Optional: video embed placeholder -->
-                <div class="relative flex justify-center overflow-hidden rounded-lg bg-gray-100 py-8">
-                    <p class="text-gray-400 text-sm"><!-- Paste YouTube embed here if needed --></p>
-                </div>
-                <br>
-
-                <!-- Reflection -->
-                <p class="text-2xl font-medium">Reflection</p>
-                <br>
-                <p class="text-justify text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
                 <br>
 
             </div>
@@ -309,4 +297,5 @@
     </div>
     <script src="../sidebar.js"></script>
 </body>
+
 </html>
