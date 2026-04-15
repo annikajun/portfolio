@@ -227,9 +227,14 @@
                 <p class="text-3xl text-center font-medium">DeskStop</p>
                 <br>
                 <p class="text-justify text-gray-500">
-                    For this assignment, I was tasked with designing, modelling, and documenting a prototype device using an integrated touchscreen and ESP32 board. I decided to create a "Live Bus Tracker" which I later named DeskStop.   
-                    The goal was to create a functional and aesthetically pleasing prototype that is minimal and doesn't take up too much desk space, while still being readable and usable. I focused on a bus stop inspired design for the casing.
+                    DeskStop is a desk-sized live bus tracker, built around an ESP32 microcontroller and a touchscreen display, housed in a 3D-printed bus stop casing. The project was set as an individual assignment for my Physical Computing module, in which I was tasked with designing, modelling, and documenting a prototype device that integrated a touchscreen and an ESP32 board.
                 </p>
+                <br>
+
+                <p class="text-xl font-medium">My role</p>
+                <p class="text-justify text-gray-500">This was a solo project. I was responsible for all aspects of the work from initial concept to finished prototype, including the hardware integration, FreeCAD modelling, 3D printing, post-processing, and technical documentation. The concept, design decisions, and iterative problem-solving throughout were entirely my own.</p>
+                <br>
+
                  <model-viewer
                     src="../images/DeskStop/Prototype.glb"  alt="3D model of the DeskStop Live Bus Tracker"
                     ar
@@ -258,12 +263,18 @@
                 </a>
                 </div>
 
+                <p class="text-2xl font-medium">Design context and problem</p>
+                <p class="text-justify text-gray-500">
+                    The brief required a functional prototype that used an ESP32 and touchscreen in a thoughtfully designed casing. I wanted to create something genuinely useful for everyday life rather than a purely demonstrative device. Waiting for buses without being able to check live arrivals is a common frustration, particularly for people without a smartphone to hand or who prefer a dedicated, always-on display. This led to the concept of a minimal desk object that passively shows live bus information for a chosen stop, styled to echo the aesthetic of a real bus stop sign.
+                </p>
+                <br>
+
                 <p class="text-2xl font-medium">Prototyping</p>
                 <p class="text-justify text-gray-500">
-                The prototyping process began with low-fidelity cardboard models to test the design and functionality before moving to 3D modeling. The first cardboard prototype proved surprisingly functional, guiding the subsequent iterative designs.
+                The prototyping process began with low-fidelity cardboard models to test the design and functionality before moving to 3D modelling. The first cardboard prototype proved surprisingly functional, guiding the subsequent iterative designs.
                 </p>
                 <p class="text-justify text-gray-500">
-                Through cardboard prototyping, key design challenges were identified and addressed. For instance, an early prototype revealed that the cable port for the ESP32 was positioned incorrectly, leading to a cluttered appearance. This was rectified in later iterations. Additionally, initial tests confirmed that the touchscreen made one side of the bus stop sign too heavy for the base to stand upright, prompting the inclusion of inserts for craft weights in the 3D design to ensure stability. The loop system for attaching the case to the pole also underwent revision after encountering difficulties in its FreeCAD implementation.
+                Through cardboard prototyping, key design challenges were identified and addressed. An early prototype revealed that the cable port for the ESP32 was positioned incorrectly, leading to a cluttered appearance. This was rectified in later iterations. Initial tests also confirmed that the touchscreen made one side of the bus stop sign too heavy for the base to stand upright, prompting the inclusion of inserts for craft weights in the 3D design to ensure stability. The loop system for attaching the case to the pole also underwent revision after encountering difficulties in its FreeCAD implementation.
                 </p>
                 <br>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -282,29 +293,34 @@
                 </div>
                 <br>
 
-                <p class="text-2xl font-medium">3D Modelling & Printing</p>
+                <p class="text-2xl font-medium">3D modelling and printing</p>
                 <p class="text-justify text-gray-500">
-                The device was  designed in FreeCAD, emphasising modularity and ease of assembly. The main components, the pole base, vertical pole, horizontal pole, case box, and case lid, were modeled with precision. Iterations during the 3D modeling phase included adjusting the base design from seven stacked circles for aesthetic reasons, reducing the vertical pole's height from 21 cm to 17.5 cm due to printer bed limitations, and correcting the orientation of the connecting hooks. Technical drawings were produced for each part to ensure precise manufacturing and can be viewed at the beginning of this page.
+                The device was designed in FreeCAD, emphasising modularity and ease of assembly. The main components, including the pole base, vertical pole, horizontal pole, case box, and case lid, were modelled with precision. Iterations during the 3D modelling phase included adjusting the base design from seven stacked circles for aesthetic reasons, reducing the vertical pole's height from 21 cm to 17.5 cm due to printer bed limitations, and correcting the orientation of the connecting hooks. Technical drawings were produced for each part to ensure precise manufacturing and can be viewed at the beginning of this page.
                 </p>
                 <br>
                 <img src="../images/DeskStop/Case Iterations.webp" alt="Case Iterations" class="object-contain md:h-80 w-full">
-                <p class="text-center text-md text-gray-500 mt-2">Case Iterations </p>
+                <p class="text-center text-md text-gray-500 mt-2">Case iterations</p>
                 <br>
                 <p class="text-justify text-gray-500">
-                The parts were 3D printed using a Bambu Lab A1 mini printer with PLA Mage Charcoal filament for the final version, and Sunlu PLA Plus Filament in Blue Grey for prototyping. Early prints of the base and poles revealed minor errors, such as hole sizes for connections, which were subsequently corrected in the models. After printing, careful post-processing was required, including removing brims and supports. Craft weights were glued into the base to provide stability, addressing a crucial finding from the cardboard prototyping phase. The rest of the components were designed to snap together, allowing for easy assembly without additional adhesive.
+                The parts were 3D printed using a Bambu Lab A1 Mini printer with PLA Mage Charcoal filament for the final version, and Sunlu PLA Plus filament in Blue Grey for prototyping. Early prints of the base and poles revealed minor errors, such as hole sizes for connections, which were subsequently corrected in the models. After printing, careful post-processing was required, including removing brims and supports. Craft weights were glued into the base to provide stability, addressing a key finding from the cardboard prototyping phase. The remaining components were designed to snap together, allowing for easy assembly without additional adhesive.
                 </p>
-
                 <br>
 
-                <p class="text-2xl font-medium">Final Prototype & Assembly</p>
+                <p class="text-2xl font-medium">Final prototype and assembly</p>
                 <br>
                 <p class="text-justify text-gray-500">
                     The final prototype successfully achieves the initial design goals, being minimal, aesthetically pleasing, and functional. It occupies minimal desk space while offering clear readability and usability of the live bus information. The assembly process proved straightforward due to the thoughtful design of the interlocking parts and the inclusion of features like magnet enclosures and internal guides for the touchscreen.
                 </p>
                 <br>
-                <img class="object-contain justify-center md:h-80 w-full" src="../images/DeskStop/DeskStop.webp" alt="Final Prototype.">
-                <p class="text-center text-md text-gray-500 mt-2">
-                Final Prototype
+                <img class="object-contain justify-center md:h-80 w-full" src="../images/DeskStop/DeskStop.webp" alt="Final Prototype">
+                <p class="text-center text-md text-gray-500 mt-2">Final prototype</p>
+                <br>
+
+                <p class="text-2xl font-medium">Reflections</p>
+                <p class="text-justify text-gray-500">
+                    This project strengthened my ability to move between digital modelling and physical fabrication, and to treat each as an iterative process rather than a linear one. The cardboard prototyping stage was more valuable than I initially anticipated; problems I might have discovered only after printing were caught much earlier and with far less material waste. I also learned to account for real-world tolerances in FreeCAD, as dimensions that look correct on screen do not always translate directly to a print. If I were to develop DeskStop further, I would explore integrating a wireless charging solution so the device could sit on a desk without a visible cable, and I would look into improving the ESP32's connectivity reliability for use in environments with weaker Wi-Fi signals.
+                </p>
+                <br>
             </div>
         </main>
     </div>
