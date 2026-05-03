@@ -1,0 +1,522 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="../index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+    <style>
+        /* ── CONCEPT CARDS ── */
+        .concept-card {
+            transition: all 0.3s ease;
+            border-top-width: 4px;
+        }
+
+        .concept-card:hover {
+            border-top-color: #b45309 !important;
+            /* Whiskey Gold */
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container {
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f3f4f6;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ── CONCEPT GRID ── */
+        :root {
+            --whiskey-border: #e5e7eb;
+            --whiskey-gold: #b45309;
+            --whiskey-dark: #1a1a1a;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .concept-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .concept-list {
+            list-style: none;
+            padding: 0 !important;
+            margin: 1.5rem 0 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .concept-list li {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #6b7280;
+            padding-left: 1.25rem;
+            border-left: 2px solid var(--whiskey-border);
+            transition: border-color 0.3s ease;
+        }
+
+        .concept-list li strong {
+            display: block;
+            font-weight: 600;
+            color: var(--whiskey-dark);
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .concept-list li:hover {
+            border-left-color: var(--whiskey-gold);
+        }
+
+        .concept-video {
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f3f4f6;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .concept-video video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .flex-container-wrapper {
+            flex-direction: column;
+            min-height: calc(100vh - 80px);
+        }
+
+        @media (min-width: 640px) {
+            .flex-container-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        .whiskey-accent {
+            color: #b45309;
+        }
+
+        .bg-whiskey-dark {
+            background-color: #1a1a1a;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <nav class="top bg-white shadow-md flex-shrink-0">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:justify-start pl-12 sm:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="../index.html" class="logo-text"
+                            style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="../PhysicalComputing.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">PHYSICAL
+                    COMPUTING</a>
+                <a href="../design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">UI/UX
+                    DESIGN</a>
+                <a href="../graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../creative.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ARTEFACTS</a>
+                <a href="../Creative Projects/RedbreastMizunaraLaunch.html"
+                    class="block rounded-md px-5 py-2 text-base text-sm text-white bg-gray-600 hover:bg-gray-400 hover:text-gray-700 transition-colors duration-200">The
+                    Master's Atelier</a>
+                <a href="../Creative Projects/claydragon.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Clay
+                    Dragon</a>
+                <a href="../Creative Projects/viperring.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">ViperRing</a>
+                <a href="../contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-linkedin-square text-3xl text-center" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="https://github.com/annikajun" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-github-square text-3xl text.center" aria-hidden="true"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
+        <aside class="hidden sm:block w-full sm:w-1/4 bg-white text-center p-4 rounded-lg mr-4 flex-shrink-0">
+            <nav class="flex flex-col space-y-2">
+                <a href="../PhysicalComputing.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">PHYSICAL
+                    COMPUTING</a>
+                <a href="../design.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">UI/UX
+                    DESIGN</a>
+                <a href="../graphicdesign.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../creative.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ARTEFACTS</a>
+                <a href="../Creative Projects/RedbreastMizunaraLaunch.html"
+                    class="rounded-md px-3 py-2 text-sm bg-gray-600 text-white hover:bg-gray-300 hover:text-gray-700 transition-colors duration-200">The
+                    Master's Atelier</a>
+                <a href="../Creative Projects/claydragon.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Clay
+                    Dragon</a>
+                <a href="../Creative Projects/viperring.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">ViperRing</a>
+                <a href="../contact.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <div class="flex justify-center">
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/annikajun" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="lg:w-3/4 md:w-3/4 sm:w-full bg-white">
+            <div class="p-4">
+                <p class="text-3xl text-center font-medium">Redbreast Whiskey: The Master's Atelier</p>
+                <br>
+                <img class="justify-center rounded-lg h-auto w-full" src="/images/Redbreast/Redbreast Thumbnail 2.png"
+                    alt="Redbreast Mizunara Concept">
+
+                <!-- Metadata Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-gray-100 mt-3">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Project Type</p>
+                        <p class="text-sm font-medium">Immersive Whiskey Launch Experience</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Medium</p>
+                        <p class="text-sm font-medium">Experiential & Digital</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Tools</p>
+                        <p class="text-sm font-medium">Blender, Figma, HTML, CSS</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Team</p>
+                        <p class="text-sm font-medium">Group</p>
+                    </div>
+                </div>
+
+                <div class="px-4 py-8 bg-gray-100 rounded-2xl my-5">
+                    <h2 class="text-xl font-semibold text-center text-black uppercase tracking-widest">The Core
+                        Challenge</h2>
+                    <p class="text-center italic text-gray-800 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
+                        How can we launch the exclusive Redbreast Mizunara Edition at the Osaka Expo 2025 through an
+                        immersive experience that bridges Irish heritage with Japanese craftsmanship?
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <a href="/images/Redbreast/RedbreastWhiskey_Report.pdf" target="_blank"
+                        class=" flex items-center justify-center px-8 py-3 bg-black hover:bg-gray-500 rounded-lg text-white sm:text-base whitespace-nowrap overflow-hidden text-ellipsis"><i class="fa-regular fa-file-pdf"></i>  Read
+                        Project Report</a>
+                    <a href="/images/Redbreast/Redbreast Presentation.pdf" target="_blank"
+                        class="flex items-center justify-center px-8 py-3 bg-black hover:bg-gray-500 rounded-lg text-white sm:text-base whitespace-nowrap overflow-hidden text-ellipsis"> <i class="fa-regular fa-file-pdf"></i>  View
+                        Presentation</a>
+                    <a href="/images/Redbreast/Redbreast Mizunara Whiskey Launch Scene.blend" target="_blank"
+                        class="flex items-center justify-center px-8 py-3 bg-black hover:bg-gray-500 rounded-lg text-white sm:text-base whitespace-nowrap overflow-hidden text-ellipsis"><i class="ri-box-3-line"> </i>     Download
+                        Blender File</a>
+                </div>
+                <section class="mb-6">
+                    <h2 class="text-2xl font-medium mb-4">Research & Insights</h2>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        The project began with a clear brief: design a launch experience for the Redbreast Mizunara
+                        Edition at the Ireland Pavilion of the Osaka Expo 2025. Rather than defaulting to a conventional
+                        product showcase, the team grounded the concept in a dual cultural identity, the heritage-led
+                        craftsmanship of Redbreast's Irish distillery tradition, and the rarity of Japanese Mizunara
+                        Osaka.
+                    </p>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        The site itself shaped our thinking early on. The Ireland Pavilion offered a 20m × 20m enclosed
+                        space with ceiling heights of up to 20 metres. This is an environment that allowed for
+                        controlled lighting, spatial audio, and directed scent. This was not an open festival floor, it
+                        was a stage. That enclosure became a design asset rather than a constraint.
+                    </p>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        To understand who we were designing for, the team identified four core audience personas:
+                        whiskey connoisseurs seeking craft and authenticity, luxury lifestyle visitors drawn to
+                        aesthetics and storytelling, press and trade guests focused on brand narrative, and first-time
+                        discoverers looking for an accessible but memorable entry point. The experience needed to work
+                        meaningfully across all four.
+                    </p>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        Industry references, including The Macallan's Gallery 12 and Jameson's Lightscape experience,
+                        were studied to understand how premium spirits brands use space, sensory layering, and personal
+                        narrative to build lasting emotional connections. Technologies explored in this phase included
+                        WebAR, projection mapping, NFC tagging, spatial audio, and scent diffusion.
+                    </p>
+                </section>
+
+                <!-- Concept Development -->
+                <section class="mb-6">
+                    <h2 class="text-2xl font-medium mb-6">Concept Development</h2>
+                    <p class="text-justify text-gray-500 leading-relaxed mb-8">
+                        Three distinct directions were developed and presented for peer review, each approaching the
+                        Ireland–Japan cultural fusion from a different angle.
+                    </p>
+
+                    <!-- Concept Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                        <!-- Concept 01 -->
+                        <div class="concept-card p-6 bg-gray-50 rounded-xl border-t-4 border-black">
+                            <span class="text-black font-bold text-sm uppercase tracking-widest">01.</span>
+                            <h3 class="font-bold text-gray-900 mt-2 mb-3">A Taste Through Culture</h3>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Proposed a large-scale environmental experience, using WebAR and projection mapping to
+                                dissolve the pavilion walls and transport visitors between the misty forests of Hokkaido
+                                and the Midleton Distillery in Cork. AI-guided storytelling, spatial audio, and scent
+                                diffusers created a passive but immersive atmosphere.
+                            </p>
+                        </div>
+
+                        <!-- Concept 02 -->
+                        <div class="concept-card p-6 bg-gray-50 rounded-xl border-t-4 border-gray-400">
+                            <span class="text-black font-bold text-sm uppercase tracking-widest">02.</span>
+                            <h3 class="font-bold text-gray-900 mt-2 mb-3">The Living Forest</h3>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Took a minimalist, discovery-led approach. Visitors entered a near-dark room filled with
+                                suspended Mizunara oak staves, scanning them via WebAR to reveal a digital robin's
+                                journey from Ireland to Japan. A pre-experience quiz shaped each visitor's individual
+                                narrative path.
+                            </p>
+                        </div>
+
+                        <!-- Concept 03 -->
+                        <div class="concept-card p-4 bg-gray-50 rounded-xl border-t-4 border-gray-200">
+                            <span class="text-black font-bold text-sm uppercase tracking-widest">03.</span>
+                            <h3 class="font-bold text-gray-900 mt-2 mb-3">The Master's Atelier</h3>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Proposed a workshop-bar hybrid where visitors became active participants. A
+                                voice-responsive AI Master Blender, computer-vision tasting tables, and live
+                                laser-engraving stations combined to turn each bottle into a unique collaboration
+                                between guest, blender, and nature.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Full Width Video -->
+                    <div class="video-container">
+                        <video controls autoplay loop muted playsinline
+                            poster="../images/Redbreast/Final Digital Output.mp4" class="w-full h-auto">
+                            <source src="../images/Redbreast/Final Digital Output.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                            <a href="../images/Redbreast/Final Digital Output.mp4">Download the video</a> instead.
+                        </video>
+                    </div>
+                </section>
+                <section class="mb-6">
+                    <h2 class="text-2xl font-medium mb-4">Why We Chose The Master's Atelier</h2>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        Peer feedback was decisive. The AR-first concepts, while visually compelling, raised concerns
+                        about passive engagement. Visitors could get distracted by their phones rather than be present
+                        in the space. The Living Forest was praised for its intimacy but flagged for a potentially
+                        confusing flow in a high-footfall expo environment.
+                    </p>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        The Master's Atelier was voted the strongest concept because it turned the visitor into an
+                        active participant rather than a spectator. It offered the clearest thematic coherence, treating
+                        each person's journey as a unique collaboration, and provided a practical spatial sequencing
+                        framework that could be realistically executed within the pavilion's footprint. The personalised
+                        physical keepsake created a lasting brand connection that neither of the other concepts
+                        achieved.
+                    </p>
+                </section>
+                <section class="mb-4">
+                    <h2 class="text-2xl font-medium mb-4">The Refined Concept: The Four Keepers Experience</h2>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        The Master's Atelier evolved into a four-stage immersive journey structured around the central
+                        metaphor of decoding a secret formula. Visitors are cast as detectives, moving through four
+                        sensory "Keepers".
+                    </p>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        The experience is anchored by a 16-seat bar that physically encloses a large Mizunara oak tree,
+                        which serves as the visual and symbolic heart of the pavilion. The bar surface is an embedded
+                        interactive touch display overlaid with a wood-grain finish, blending the digital and the
+                        tactile seamlessly. Visitors choose their vessel on arrival: either a cask-style mug or a
+                        traditional whiskey glass, each embedded with an NFC chip that triggers localised digital
+                        responses as the experience progresses.
+                    </p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse my-6">
+                            <thead>
+                                <tr class="bg-gray-300">
+                                    <th class="p-4 border border-gray-300 font-bold">Keeper</th>
+                                    <th class="p-4 border border-gray-300 font-bold">Sensory Focus</th>
+                                    <th class="p-4 border border-gray-300 font-bold">The Interaction</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-500">
+                                <tr>
+                                    <td class="p-4 border border-gray-300 font-medium text-black">Keeper I: Sandalwood
+                                    </td>
+                                    <td class="p-4 border border-gray-300 ">Smell</td>
+                                    <td class="p-4 border border-gray-300 ">Spray a fragrance and identify the note.
+                                        Place the vessel on the correct NFC zone to illuminate the bar surface.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border border-gray-300 font-medium text-black">Keeper II: Oak</td>
+                                    <td class="p-4 border border-gray-300 ">Touch</td>
+                                    <td class="p-4 border border-gray-300 ">Match three physical wood coasters, each of
+                                        different grain and weight, to their corresponding hollow shapes cut into the
+                                        bar surface.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border border-gray-300 font-medium text-black">Keeper III: Spice</td>
+                                    <td class="p-4 border border-gray-300 ">Taste</td>
+                                    <td class="p-4 border border-gray-300 ">While tasting the whiskey, drag a digital
+                                        clock-hand across a pulsing radar interface to mark the dominant tasting
+                                        sensation.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border border-gray-300 font-medium text-black">Keeper IV: Orchard
+                                        Fruit</td>
+                                    <td class="p-4 border border-gray-300 ">Personal Reflection</td>
+                                    <td class="p-4 border border-gray-300 ">Answer four instinct-based questions. Each
+                                        answer grows unique digital blossoms on a tree projected onto the bar surface,
+                                        culminating in a personalised fruit reveal.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="mb-6">
+                    <h2 class="text-2xl font-medium mb-4">The Interaction Model</h2>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        The bar surface combines capacitive touch technology with physical NFC sensors to create a
+                        seamless blend of tangible and digital interaction. Wood coasters, fragrance bottles, and
+                        drinking vessels are moved physically by the visitor, while draggable sliders, radar diagrams,
+                        and animated interfaces respond in real time on the "smart" surface beneath them.
+                    </p>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        The system also tracks live statistics, creating a sense of collective rarity. Visitors are
+                        told, for example, that only 12% of that day's visitors share their orchard fruit. This
+                        reinforces the limited-edition nature of the Mizunara Edition and makes each result feel
+                        genuinely person.
+                    </p>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        At the close of the experience, guests depart with two physical keepsakes: a personalised
+                        whiskey taster certificate and their chosen vessel, both laser-engraved in real time with their
+                        name and the date of their visit.
+                    </p>
+                </section>
+                <section class="mb-6">
+                    <h2 class="text-2xl font-medium mb-4">Technical Stack</h2>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        The hardware stack was designed specifically for the Osaka Expo context, including 100V/60Hz
+                        adapted lighting for the Japanese electrical standard. NFC readers are embedded throughout the
+                        bar surface, paired with interactive touch displays concealed beneath wood-grain overlays. A
+                        live laser engraver operates continuously during the Keeper IV quiz, completing the vessel
+                        personalisation in real time.
+                    </p>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        On the software side, the Keeper interfaces were built as custom HTML/JS prototypes with SVG
+                        animations, designed to run directly on the embedded bar displays.
+                    </p>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        The decision to move away from free-roaming AR towards a communal bar installation was a
+                        deliberate one. The bar format fostered social connection between strangers seated alongside one
+                        another, created a manageable and predictable visitor flow for a high-capacity expo environment,
+                        and ensured staff could facilitate and moderate the experience effectively.
+                    </p>
+                </section>
+                <section class="mb-6">
+                    <h2 class="text-2xl font-medium mb-4">The Responsibilities</h2>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        As team leader, I was responsible for coordinating the group across every stage of the project,
+                        from initial research and concept ideation through to final delivery. This involved setting
+                        milestones, reviewing each team member's contributions for quality and completeness,
+                        facilitating feedback sessions, and ensuring the overall narrative of the presentation held
+                        together cohesively.
+                    </p>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        Beyond the leadership role, my primary creative contribution was the 3D environment design. I
+                        built the pavilion scene in Blender, developing the bar installation in full, including the
+                        central Mizunara oak tree, the surrounding 16-seat bar structure, the honeycomb wall shelving,
+                        whiskey barrel storage, and the decorative damask wall finish that fused Irish and Japanese
+                        visual traditions. I also designed the detailed bar-top layout for Keeper I and Keeper II,
+                        modelling the NFC fragrance zones, wood coaster slots, fragrance bottle arrangements, and copper
+                        tap fixtures that bring the physical interaction model to life. These renders were central to
+                        communicating the final vision, and were used directly in the presentation and video
+                        walkthrough.
+                    </p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+
+    <div class="fixed bottom-4 right-4 z-50">
+        <a href="#top" class="block">
+            <i
+                class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+
+    <script src="../sidebar.js"></script>
+</body>
+
+</html>

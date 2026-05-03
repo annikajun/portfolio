@@ -39,31 +39,28 @@
                         <!-- Icon when menu is open, initially hidden, now with an ID -->
                         <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
                 <div class="flex flex-1 items-center justify-between md:items-stretch pl-12 md:pl-0">
                     <div class="flex shrink-0 text-black text-2xl">
-                        <a href="index.html" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA </a>
+                        <a href="index.html" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA
+                        </a>
                     </div>
                     <div class="hidden md:ml-6 md:block">
                         <div class="flex">
+                            <a href="PhysicalComputing.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">PHYSICAL
+                                COMPUTING</a>
                             <a href="design.html"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"
-                                aria-current="page">DESIGN</a>
+                                aria-current="page">UI/UX DESIGN</a>
                             <a href="graphicdesign.html"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">GRAPHIC
                                 DESIGN</a>
-                            <a href="3dprints.html"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">3D
-                                PRINTS</a>
-                            <a href="coding.html"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CODING</a>
                             <a href="creative.html"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CREATIVE</a>
-                            <a href="aboutme.html"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">ABOUT ME</a>
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">ARTEFACTS</a>
                             <a href="contact.html"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CONTACT</a>
                         </div>
@@ -77,21 +74,17 @@
         <!-- Mobile menu, now with 'hidden' class by default -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="PhysicalComputing.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">PHYSICAL
+                    COMPUTING</a>
                 <a href="design.html"
                     class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white"
-                    aria-current="page">DESIGN</a>
+                    aria-current="page">UI/UX DESIGN</a>
                 <a href="graphicdesign.html"
                     class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">GRAPHIC
                     DESIGN</a>
-                <a href="3dprints.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">3D
-                    PRINTS</a>
-                <a href="coding.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CODING</a>
                 <a href="creative.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CREATIVE</a>
-                <a href="aboutme.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">ABOUT ME</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">ARTEFACTS</a>
                 <a href="contact.html"
                     class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CONTACT</a>
             </div>
@@ -100,61 +93,106 @@
     <!--Main Content-->
     <div class="grid lg:grid-cols-2 md:grid-cols-2 gap-5 p-4">
         <div class="relative w-full pb-[56.25%] group">
-            <a href="Design Projects/litnest.html" class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
+            <a href="Physical Computing/FromArtefactToInteraction.html"
+                class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg">
+                <img src="images/FromArtefactToInteraction/FYP Thumbnail.jpeg"
+                    alt="From Artefact To Interaction Thumbnail"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                        <p class="text-black text-3xl md:text-xl lg:text-3xl text-center">From Artefact to Interaction
+                        </p>
+                        <p class="text-gray-600 text-lg md:text-sm lg:text-lg mt-2 text-center px-4">A Tangible Smart
+                            Replica of
+                            an Ancient
+                            Greek Statue</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="relative w-full pb-[56.25%] group">
+            <a href="Design Projects/litnest.html"
+                class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
                 <img src="images/LitNest Ad.webp" alt="LitNest"
                     class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                 <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
-                        <p class="text-black text-3xl">LitNest</p>
-                        <p class="text-gray-600 text-lg mt-2 text-center px-4">UI/UX Design & Prototyping</p>
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                        <p class="text-black text-3xl md:text-xl lg:text-3xl text-center">LitNest</p>
+                        <p class="text-gray-600 text-lg md:text-sm lg:text-lg mt-2 text-center px-4">UI/UX Design &
+                            Prototyping
+                        </p>
                     </div>
                 </div>
             </a>
         </div>
         <div class="relative w-full pb-[56.25%] group">
-            <a href="Graphic Projects/careerserviceposters.html" class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
+            <a href="Graphic Projects/careerserviceposters.html"
+                class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
                 <img src="images/Career Service Posters/CareersFairThumbnail.webp" alt="Careers Service Posters"
                     class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                 <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
-                        <p class="text-black text-3xl">Careers Service</p>
-                        <p class="text-gray-600 text-lg mt-2 text-center px-4">Branding and Marketing Collateral</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-         <div class="relative w-full pb-[56.25%] group">
-            <a href="3D Projects/deskstop.html" class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
-                <img src="images/DeskStop/Desktop_Render.webp" alt="DeskStop"
-                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                 <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
-                        <p class="text-black text-3xl">DeskStop</p>
-                        <p class="text-gray-600 text-lg mt-2 text-center px-4">Live Bus Tracker Prototype</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-       <div class="relative w-full pb-[56.25%] group">
-            <a href="Coding Projects/amusingourselvestodeath.html" class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
-                <img src="images/AOTD MaxPatch.webp" alt="Amusing Ourselves to Death"
-                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                 <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
-                        <p class="text-black text-3xl">Amusing Ourselves to Death</p>
-                        <p class="text-gray-600 text-lg mt-2 text-center px-4">Max/MSP & Arduino Installation</p>
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                        <p class="text-black text-3xl md:text-xl lg:text-3xl text-center">Careers Service</p>
+                        <p class="text-gray-600 text-lg md:text-sm lg:text-lg mt-2 text-center px-4">Branding and
+                            Marketing
+                            Collateral</p>
                     </div>
                 </div>
             </a>
         </div>
         <div class="relative w-full pb-[56.25%] group">
-            <a href="Creative Projects/viperring.html" class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
-                <img src="images/storyboard2.png" alt="ViperRing AI Multimedia"
+            <a href="Physical Computing/deskstop.html"
+                class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
+                <img src="images/DeskStop/Desktop_Render.webp" alt="DeskStop"
                     class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                 <div class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center items-center justify-center rounded-lg opacity-90 shadow-xl">
-                        <p class="text-black text-3xl">ViperRing</p>
-                        <p class="text-gray-600 text-lg mt-2 text-center px-4">AI Multimedia Project</p>
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                        <p class="text-black text-3xl md:text-xl lg:text-3xl text-center">DeskStop</p>
+                        <p class="text-gray-600 text-lg md:text-sm lg:text-lg mt-2 text-center px-4">Live Bus Tracker
+                            Prototype
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="relative w-full pb-[56.25%] group">
+            <a href="Physical Computing/amusingourselvestodeath.html"
+                class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
+                <img src="images/AOTD MaxPatch.webp" alt="Amusing Ourselves to Death"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                        <p class="text-black text-3xl md:text-xl lg:text-3xl text-center">Amusing Ourselves to Death
+                        </p>
+                        <p class="text-gray-600 text-lg md:text-sm lg:text-lg mt-2 text-center px-4">Max/MSP & Arduino
+                            Installation</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="relative w-full pb-[56.25%] group">
+            <a href="Creative Projects/viperring.html"
+                class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-400">
+                <img src="images/ViperRing/ViperRing worn.png" alt="ViperRing Thumbnail"
+                    class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                        <p class="text-black text-3xl md:text-xl lg:text-3xl text-center">ViperRing</p>
+                        <p class="text-gray-600 text-lg md:text-sm lg:text-lg mt-2 text-center px-4">A Speculative
+                            Design
+                            Fiction</p>
                     </div>
                 </div>
             </a>
@@ -165,12 +203,13 @@
         <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
     </footer>
 
- <!-- Scroll Up Button - positioned fixed at bottom right -->
+    <!-- Scroll Up Button - positioned fixed at bottom right -->
     <div class="fixed bottom-4 right-4 z-50">
-       
+
         <a href="#top" class="block">
             <!-- Icon with Tailwind classes replacing the custom CSS -->
-            <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+            <i
+                class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
         </a>
     </div>
 

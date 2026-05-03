@@ -1,0 +1,283 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="../index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+    <style>
+        .flex-container-wrapper {
+            flex-direction: column;
+            min-height: calc(100vh - 80px);
+        }
+        @media (min-width: 640px) {
+            .flex-container-wrapper {
+                flex-direction: row;
+            }
+        }
+        main {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- Navigation Bar (UNCHANGED) -->
+    <nav class="top bg-white shadow-md flex-shrink-0">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:justify-start pl-12 sm:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="../index.html" class="logo-text"
+                            style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="../PhysicalComputing.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white">PHYSICAL COMPUTING</a>
+                <a href="../Physical Computing/FromArtefactToInteraction.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white">From Artefact to Interaction</a> 
+                <a href="../Physical Computing/amusingourselvestodeath.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white">Amusing Ourselves to Death</a>
+                <a href="../Physical Computing/deskstop.html"
+                    class="block rounded-md px-5 py-2 text-base text-sm text-white bg-gray-600">DeskStop</a>
+                <a href="../Physical Computing/efficensee.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white">EfficenSee</a>
+                <a href="../design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white">UI/UX DESIGN</a>
+                <a href="../graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white">GRAPHIC DESIGN</a>
+                <a href="../creative.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white">ARTEFACTS</a>
+                <a href="../contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
+        <!-- Sidebar (UNCHANGED) -->
+        <aside class="hidden sm:block w-full sm:w-1/4 bg-white text-center p-4 rounded-lg mr-4 flex-shrink-0">
+            <nav class="flex flex-col space-y-2 sticky top-4">
+                <a href="../PhysicalComputing.html" class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white">PHYSICAL COMPUTING</a>
+                <a href="../Physical Computing/FromArtefactToInteraction.html" class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white">From Artefact to Interaction</a> 
+                <a href="../Physical Computing/amusingourselvestodeath.html" class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white">Amusing Ourselves to Death</a>
+                <a href="../Physical Computing/deskstop.html" class="rounded-md px-3 py-2 text-sm bg-gray-600 text-white">DeskStop</a>
+                <a href="../Physical Computing/efficensee.html" class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white">EfficenSee</a>
+                <a href="../design.html" class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white">UI/UX DESIGN</a>
+                <a href="../graphicdesign.html" class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white">GRAPHIC DESIGN</a>
+                <a href="../creative.html" class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white">ARTEFACTS</a>
+                <a href="../contact.html" class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white">CONTACT</a>
+                <div class="flex justify-center pt-4">
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank" class="px-2 text-gray-700 hover:text-black"><i class="fa fa-linkedin-square text-3xl"></i></a>
+                    <a href="https://github.com/annikajun" target="_blank" class="px-2 text-gray-700 hover:text-black"><i class="fa fa-github-square text-3xl"></i></a>    
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Project Content -->
+        <main class="lg:w-3/4 md:w-3/4 sm:w-full bg-white max-w-5xl mx-auto">
+            <div class="p-4 md:p-8">
+                <!-- Title (UNCHANGED) -->
+                <p class="text-3xl text-center font-medium">DeskStop</p>
+                
+                <!-- Intro Section with Metadata -->
+                <div class="mt-8 mb-12">
+                    <p class="text-lg leading-relaxed text-gray-600 text-justify mb-10">
+                        DeskStop is a desk-sized live bus tracker, built around an ESP32 microcontroller and a touchscreen display, housed in a 3D-printed bus stop casing. The project was set as an individual assignment for a 3D Modelling and Digital Fabrication module, in which I was tasked with designing, modelling, and documenting a prototype device that integrated a touchscreen and an ESP32 board.
+                    </p>
+
+                    <!-- Metadata Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-gray-100 mb-12">
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Hardware</p>
+                            <p class="text-sm font-medium">ESP32, Touchscreen</p>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Fabrication</p>
+                            <p class="text-sm font-medium">3D Printing (PLA)</p>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Software</p>
+                            <p class="text-sm font-medium">FreeCAD, Bambu Studio</p>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Assignment</p>
+                            <p class="text-sm font-medium">Individual Project</p>
+                        </div>
+                    </div>
+
+                    <!-- 3D Viewer Area -->
+                    <div class="bg-gray-50 rounded-3xl p-4 md:p-8 shadow-inner mb-4">
+                        <model-viewer
+                            src="../images/DeskStop/Prototype.glb"  alt="3D model of the DeskStop Live Bus Tracker"
+                            ar ar-modes="webxr scene-viewer quick-look"
+                            shadow-intensity="1" camera-controls touch-action="pan-y"
+                            auto-rotate disable-zoom
+                            class="w-full h-96 md:h-130 mx-auto">
+                        </model-viewer>
+                        <p class="text-center text-sm font-medium text-gray-400 mt-4 flex items-center justify-center gap-2">
+                            </i> Interactive 3D Model of the DeskStop
+                        </p>
+                    </div>
+
+                    <!-- Resource Buttons -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+                        <a href="../images/DeskStop/Prototype.stl" target="_blank"
+                            class="flex items-center justify-center gap-2 px-6 py-4 bg-black hover:bg-gray-800 text-white rounded-xl transition-all font-medium shadow-md">
+                            <i class="ri-box-3-line"></i> Prototype File
+                        </a>
+                        <a href="../images/DeskStop/AnnikaJungfleisch_22359923_CS4126Report.pdf" target="_blank"
+                            class="flex items-center justify-center gap-2 px-6 py-4 bg-white border-2 border-black text-black hover:bg-gray-50 rounded-xl transition-all font-medium">
+                            <i class="ri-file-pdf-line"></i> Project Report 
+                        </a>
+                        <a href="../images/DeskStop/Technical Drawings.pdf" target="_blank"
+                            class="flex items-center justify-center gap-2 px-6 py-4 bg-white border-2 border-black text-black hover:bg-gray-50 rounded-xl transition-all font-medium">
+                            <i class="ri-ruler-2-line"></i> Technical Drawings
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Content Sections -->
+                <div class="space-y-20">
+                    <!-- Context -->
+                    <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <h2 class="text-2xl font-bold text-gray-900">Design Context and Problem</h2>
+                        <div class="md:col-span-2 text-gray-600 leading-relaxed text-justify space-y-4">
+                            <p>
+                                The brief required a functional prototype that used an ESP32 and touchscreen in a thoughtfully designed casing. I wanted to create something genuinely useful for everyday life rather than a purely demonstrative device. 
+                            </p>
+                            <p>
+                                Waiting for buses without being able to check live arrivals is a common frustration, particularly for people without a smartphone to hand or who prefer a dedicated, always-on display. This led to the concept of a minimal desk object that passively shows live bus information for a chosen stop, styled to echo the aesthetic of a real bus stop sign.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Responsibilities -->
+                    <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <h2 class="text-2xl font-bold text-gray-900">Responsibilities</h2>
+                        <div class="md:col-span-2 text-gray-600 leading-relaxed text-justify">
+                            <p>This was an individual project involving all aspects of the work from initial concept to finished prototype, including the hardware integration, FreeCAD modelling, 3D printing, post-processing, and technical documentation. The concept, design decisions, and iterative problem-solving throughout were entirely my own.</p>
+                        </div>
+                    </section>
+
+                    <!-- Prototyping -->
+                    <section class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <h2 class="text-2xl font-bold text-gray-900">Prototyping</h2>
+                            <div class="md:col-span-2 text-gray-600 leading-relaxed text-justify space-y-4">
+                                <p>The prototyping process began with low-fidelity cardboard models to test the design and functionality before moving to 3D modelling. The first cardboard prototype proved functional, guiding the subsequent iterative designs.</p>
+                                <p>Through cardboard prototyping, key design challenges were identified and addressed. An early prototype revealed that the cable port for the ESP32 was positioned incorrectly, leading to a cluttered appearance. This was rectified in later iterations. Initial tests also confirmed that the touchscreen made one side of the bus stop sign too heavy for the base to stand upright, prompting the inclusion of inserts for craft weights in the 3D design to ensure stability. The loop system for attaching the case to the pole also underwent revision after encountering difficulties in its FreeCAD implementation.</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                            <figure>
+                                <img class="rounded-2xl shadow-lg w-full border border-gray-100" src="../images/DeskStop/Cardboard Prototype 1.webp" alt="First Cardboard Prototype">
+                                <figcaption class=" text-center text-sm font-medium text-gray-400 mt-4 italic">First Cardboard Prototype</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="rounded-2xl shadow-lg w-full border border-gray-100" src="../images/DeskStop/Cardboard Prototype 2.webp" alt="Second cardboard prototype">
+                                <figcaption class="text-center text-sm font-medium text-gray-400 mt-4 italic">Second Cardboard Prototype</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!-- 3D Modelling -->
+                    <section class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <h2 class="text-2xl font-bold text-gray-900">3D Modelling & Printing</h2>
+                            <div class="md:col-span-2 text-gray-600 leading-relaxed text-justify space-y-4">
+                                <p>The device was designed in FreeCAD, emphasising modularity and ease of assembly. The main components, including the pole base, vertical pole, horizontal pole, case box, and case lid, were modelled with precision. Iterations during the 3D modelling phase included adjusting the base design from seven stacked circles for aesthetic reasons, reducing the vertical pole's height from 21 cm to 17.5 cm due to printer bed limitations, and correcting the orientation of the connecting hooks. Technical drawings were produced for each part to ensure precise manufacturing and can be viewed at the beginning of this page.</p>
+                                <p>The parts were 3D printed using a Bambu Lab A1 Mini printer with PLA Mage Charcoal filament for the final version, and Sunlu PLA Plus filament in Blue Grey for prototyping. Early prints of the base and poles revealed minor errors, such as hole sizes for connections, which were subsequently corrected in the models. After printing, careful post-processing was required, including removing brims and supports. Craft weights were glued into the base to provide stability, addressing a key finding from the cardboard prototyping phase. The remaining components were designed to snap together, allowing for easy assembly without additional adhesive.</p>
+                                <figure>
+                                    <div class="bg-gray-50 rounded-xl p-2 border border-gray-100 w-full ml-auto">
+                                        <img src="../images/DeskStop/Case Iterations.jpg" alt="Case Iterations" class="rounded-lg shadow-sm w-full">
+                                    </div>
+                                    <figcaption class="text-center text-sm font-medium text-gray-400 mt-4 italic">
+                                        Evolution of Case Iterations during the Design Process
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Final Prototype -->
+                    <section class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <h2 class="text-2xl font-bold text-gray-900">Final Prototype & Assembly</h2>
+                            <div class="md:col-span-2 text-gray-600 leading-relaxed text-justify">
+                                <p>The final prototype successfully achieves the initial design goals, being minimal, aesthetically pleasing, and functional. It occupies minimal desk space while offering clear readability and usability of the live bus information. The assembly process proved straightforward due to the thoughtful design of the interlocking parts and the inclusion of features like magnet enclosures and internal guides for the touchscreen.</p>
+                            </div>
+                        </div>
+                        <figure class="mt-8">
+                            <img class="rounded-2xl shadow-lg w-full border border-gray-100" src="../images/DeskStop/DeskStop.webp" alt="Final Prototype">
+                            <figcaption class="text-center text-sm font-medium text-gray-400 mt-4 italic">Final Prototype</figcaption>
+                        </figure>
+                    </section>
+
+                    <!-- Reflection -->
+                    <section class="bg-gray-50 rounded-3xl p-8 md:p-12 mb-12 border border-gray-100">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Reflection</h2>
+                        <div class="text-gray-600 leading-relaxed text-justify space-y-4">
+                            <p>
+                                This project strengthened my ability to move between digital modelling and physical fabrication, reinforcing the importance of treating these stages as an iterative cycle rather than a linear progression. The cardboard prototyping phase proved more critical than initially anticipated, as it allowed for the early identification of design flaws that would have otherwise resulted in substantial material waste during the printing process.
+                            </p>
+                            <p>
+                                Experience with FreeCAD highlighted the necessity of accounting for real-world tolerances, acknowledging that on-screen dimensions often require adjustment to translate accurately into a physical print. Future developments for DeskStop would focus on integrating a wireless charging solution to achieve a cleaner, cable-free aesthetic and refining the ESP32's connectivity to ensure reliable performance in environments with degraded Wi-Fi signals.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer (UNCHANGED) -->
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+
+    <!-- Scroll Up Button -->
+    <div class="fixed bottom-4 right-4 z-50">
+        <a href="#top" class="block">
+            <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+
+    <script src="../sidebar.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+
+</html>
