@@ -1,0 +1,326 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="../index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+    <style>
+        .flex-container-wrapper {
+            flex-direction: column;
+            min-height: calc(100vh - 80px);
+        }
+        @media (min-width: 640px) {
+            .flex-container-wrapper {
+                flex-direction: row;
+            }
+        }
+        main {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+
+<body class="flex flex-col min-h-screen">
+    <nav class="top bg-white shadow-md flex-shrink-0">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:justify-start pl-12 sm:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="../index.html" class="logo-text"
+                            style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="../PhysicalComputing.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">PHYSICAL COMPUTING</a>
+                <a href="../Physical Computing/FromArtefactToInteraction.html"
+                    class="block rounded-md px-5 py-2 text-base text-sm text-white bg-gray-600 hover:bg-gray-400 hover:text-gray-700 transition-colors duration-200">From Artefact to Interaction</a> 
+                <a href="../Physical Computing/amusingourselvestodeath.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
+                <a href="../Physical Computing/deskstop.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">DeskStop</a>
+                <a href="../Physical Computing/efficensee.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">EfficenSee</a>
+                <a href="../design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+                    aria-current="page">UI/UX DESIGN</a>
+                <a href="../graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../creative.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ARTEFACTS</a>
+                <a href="../contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-linkedin-square text-3xl text-center" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="https://github.com/annikajun" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-github-square text-3xl text.center" aria-hidden="true"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
+        <aside class="hidden sm:block w-full sm:w-1/4 bg-white text-center p-4 rounded-lg mr-4 flex-shrink-0">
+            <nav class="flex flex-col space-y-2">
+                 <a href="../PhysicalComputing.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+                    aria-current="page">PHYSICAL COMPUTING</a>
+                <a href="../Physical Computing/FromArtefactToInteraction.html"
+                    class="rounded-md px-3 py-2 text-sm bg-gray-600 text-white hover:bg-gray-300 hover:text-gray-700 transition-colors duration-200">From Artefact to Interaction</a> 
+                <a href="../Physical Computing/amusingourselvestodeath.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Amusing
+                    Ourselves to Death</a>
+                <a href="../Physical Computing/deskstop.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">DeskStop</a>
+                <a href="../Physical Computing/efficensee.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">EfficenSee</a>
+                <a href="../design.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+                    aria-current="page">UI/UX DESIGN</a>
+                 <a href="../graphicdesign.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+                    aria-current="page">GRAPHIC DESIGN</a>
+                <a href="../creative.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ARTEFACTS</a>
+                <a href="../contact.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200"
+                    aria-current="page">CONTACT</a>
+                <div class="flex justify-center">
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/annikajun" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+            </nav>
+        </aside>
+
+        <main class="lg:w-3/4 md:w-3/4 sm:w-full bg-white">
+            <div class="p-4">
+                <header class="mb-12">
+                    <h1 class="text-4xl text-center font-medium mb-6">From Artefact to Interaction</h1>
+                    <img src="../images/FromArtefactToInteraction/UL CS Final Year Projects 9.JPG" alt="Project Showcase" class="object-contain rounded-xl h-auto w-full mb-8 shadow-sm">
+                    
+                    <div class="px-4 py-6 sm:px-12 bg-gray-50 rounded-2xl mb-8">
+                        <h2 class="text-xl font-semibold text-center mb-4 text-gray-800">The Research Question</h2>
+                        <p class="text-center italic text-black text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
+                            How can a 3D-printed Tangible Smart Replica of an Ancient Greek Statue be designed to improve visitor engagement while remaining sustainable and practical for long-term museum integration?
+                        </p>
+                    </div>
+
+                    <p class="text-justify text-gray-500 leading-relaxed mb-6">
+                        Traditional museums often operate under a "DO NOT TOUCH" policy, creating a sensory barrier between visitors and cultural heritage. My project, "From Artefact to Interaction", was developed as a Final Year Project to bridge this gap. By transforming a static replica of a Caryatid, an ancient Greek statue, into a Tangible Smart Replica (TSR) designed as a 3D puzzle, I aimed to explore how physical touch can deepen our understanding of history. The goal was to create an exhibit that invites curiosity, where the act of reconstruction leads directly to digital discovery.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+                        <a href="/images/FromArtefactToInteraction/DMD_Report_JungfleischAnnika_22359923.pdf" target="_blank" class="flex items-center justify-center px-4 py-3 bg-black hover:bg-gray-800 rounded-lg text-white font-medium transition-all duration-200">Read the Full Report</a>
+                        <a href="/images/FromArtefactToInteraction/ProjectVideo.mp4" target="_blank" class="flex items-center justify-center px-4 py-3 bg-black hover:bg-gray-800 rounded-lg text-white font-medium transition-all duration-200">Watch Demo Video</a>
+                        <a href="/images/FromArtefactToInteraction/From Artefact to Interaction.pdf" target="_blank" class="flex items-center justify-center px-4 py-3 bg-black hover:bg-gray-800 rounded-lg text-white font-medium transition-all duration-200">View Project Poster</a>
+                    </div>
+                </header>
+
+                <section class="mb-16">
+                    <h2 class="text-2xl font-medium mb-4">The Concept: Embodied Cognition</h2>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                        This project is grounded in the theory of embodied cognition, a psychological principle suggesting that learning is not just a mental process, but one significantly enhanced through physical interaction. By requiring visitors to physically reconstruct the statue, the exhibit shifts the visitor's role from a passive observer to an active experimenter. This tactile approach ensures that the historical information provided at the end of the interaction is anchored to a physical memory.
+                    </p>
+                </section>
+                <section class="mb-16">
+                    <h2 class="text-2xl font-medium mb-6">Design & Fabrication: Merging Digital and Physical</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                        <div>
+                            <p class="text-justify text-gray-500 leading-relaxed mb-4">
+                                The fabrication process was a multidisciplinary effort that combined digital precision with physical durability. To achieve a realistic look and feel, the 3D model of the Caryatid statue was meticulously divided into six puzzle segments. These parts were 3D printed using a marble-like PLA filament with a 40% infill, which provided the necessary weight and stone-like texture to make the replica feel authentic.
+                                A significant portion of the iterative prototyping involved calibrating the tactile "snap" of the puzzle pieces. Eventually, 4x2 mm magnets were integrated into custom-modelled internal cavities to ensure the assembled figure remained stable during the final interaction.
+                            </p>
+                            <p class="text-justify text-gray-500 leading-relaxed">
+                                Parallel to the statue production, the interactive base was designed in Affinity Vector and constructed from laser-cut 6mm MDF. The finger-joint assembly method was utilised to ensure the electronics housing was structurally sound for high-traffic environments, such as museums, while remaining hollow to neatly organise the internal electronics.
+                            </p>
+                        </div>
+                        <div>
+                            <model-viewer
+                                src="/images/FromArtefactToInteraction/Statue Final.glb" alt="3D Model of Statue"
+                                ar ar-modes="webxr scene-viewer quick-look"
+                                shadow-intensity="1" camera-controls touch-action="pan-y"
+                                auto-rotate disable-zoom
+                                class="w-full h-80 lg:h-96 rounded-xl bg-gray-200">
+                            </model-viewer>
+                            <p class="text-center text-sm text-gray-500 mt-3">Final Tangible Smart Replica</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-16">
+                    <h2 class="text-2xl font-medium mb-4">System Architecture: How It Works</h2>
+                    <p class="text-justify text-gray-500 leading-relaxed mb-8">
+                        The system is designed as a seamless feedback loop between a visitor’s physical actions and a digital narrative. It begins when a visitor encounters the disassembled statue and uses the figure's physical form as a natural guide for reconstruction. Once the user successfully completes the puzzle and places it on the MDF base, an NFC tag embedded in the statue’s feet is identified by a PN532 NFC reader hidden within the base. This detection triggers the Arduino Uno to send a signal to a local PC running Processing, which serves as the bridge to the digital rewards. The system then provides immediate sensory feedback through a localised audio narration that shares historical context about the Caryatids, paired with a visual animation on a nearby screen.
+                    </p>
+                    <div>
+                        <img src="/images/FromArtefactToInteraction/Tech Flow.png" alt="User Flow Diagram" class="lg:w-3/4 mx-auto object-contain w-full rounded-lg">
+                        <p class="text-center text-sm text-gray-500 mt-4">System Flow: From Physical Interaction to Digital Feedback</p>
+                    </div>
+                </section>
+                <section class="mb-16">
+                    <h2 class="text-2xl font-medium mb-6">Technical Stack</h2>
+                <p class="text-justify text-gray-500">
+                    The system bridges digital fabrication with physical computing to create a seamless "walk-up-and-use" experience.
+                </p>
+                <table style="width: 100%; border-collapse: collapse; font-family: sans-serif; margin: 20px 0;">
+                <thead>
+                    <tr style="background-color: #f2f2f2; text-align: left;">
+                    <th style="padding: 12px; border: 1px solid #ddd;">Component</th>
+                    <th style="padding: 12px; border: 1px solid #ddd;">Technology Used</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Fabrication</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;" class=" text-gray-500">FDM 3D Printing (Marble-like PLA) &amp; Laser Cutting (6mm MDF)</td>
+                    </tr>
+                    <tr>
+                    <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Microcontroller</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;" class=" text-gray-500">Arduino Uno (for reliable, real-time I/O control)</td>
+                    </tr>
+                    <tr>
+                    <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Sensing</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;" class=" text-gray-500">Near Field Communication (NFC) via PN532 modules</td>
+                    </tr>
+                    <tr>
+                    <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Output</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;" class=" text-gray-500">Processing-based visual animations and localised auditory narratives</td>
+                    </tr>
+                </tbody>
+                </table>
+                <img src="/images/FromArtefactToInteraction/Labelled Base.png" alt="Base and Electronics" class="mx-auto lg:w-3/4 object-contain w-full rounded-lg">
+                <p class="text-center text-sm text-gray-500 mt-4">Technical Stack </p>
+                </section>
+
+                <section class="mb-16">
+                    <h2 class="text-2xl font-medium mb-6">Impact & Results</h2>
+                    <p class="text-justify text-gray-500 mb-10 leading-relaxed">
+                        To validate the effectiveness of the TSR, 20 rounds of A/B testing was conducted, comparing the interactive puzzle against a traditional static display. The data gathered confirms that physical engagement is a powerful driver for both interest and education.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div class="flex flex-col">
+                            <div class="mb-4">
+                                <h3 class="text-lg font-bold text-black uppercase ">01. Dwell Time</h3>
+                                <p class="text-gray-500 text-medium">Interaction duration increased by <strong>156.3%</strong> compared to static observation.</p>
+                            </div>
+                            <img class="w-full h-100 object-contain rounded-xl p-4 " src="/images/FromArtefactToInteraction/Dwell Time.png" alt="Dwell Time Graph">
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="mb-4">
+                                <h3 class="text-lg font-bold text-black uppercase">02. Information Retention</h3>
+                                <p class="text-gray-500 text-medium">Participants scored <strong>34% higher</strong> in recall tests after physical interaction.</p>
+                            </div>
+                            <img class="w-full h-65 object-contain" src="/images/FromArtefactToInteraction/Information Recall.png" alt="Recall Graph">
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="mb-4">
+                                <h3 class="text-lg font-bold text-black uppercase">03. Usability Rating</h3>
+                                <p class="text-gray-500 text-medium">The system achieved a <strong>Grade A</strong> rating on the System Usability Scale (SUS).</p>
+                            </div>
+                            <img class="w-auto h-80 object-contain" src="/images/FromArtefactToInteraction/SUS Score.png" alt="SUS Score Graph">
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="mb-4">
+                                <h3 class="text-lg font-bold text-black uppercase">04. Sustainability</h3>
+                                <p class="text-gray-500 text-medium">The total unit cost remained <strong>under €200</strong>, ensuring the project is economically viable for real-world museum deployment.</p>
+
+                                <table style="width: 100%; border-collapse: collapse; font-family: sans-serif; margin: 20px 0;">
+                                    <thead>
+                                        <tr style="background-color: #f2f2f2; text-align: left;">
+                                        <th style="padding: 12px; border: 1px solid #ddd;">Category</th>
+                                        <th style="padding: 12px; border: 1px solid #ddd;">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Hardware</td>
+                                        <td style="padding: 12px; border: 1px solid #ddd;" class=" text-gray-500">€124.79</td>
+                                        </tr>
+                                        <tr>
+                                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Materials</td>
+                                        <td style="padding: 12px; border: 1px solid #ddd;" class=" text-gray-500">€72.98</td>
+                                        </tr>
+                                        <tr>
+                                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Software</td>
+                                        <td style="padding: 12px; border: 1px solid #ddd;" class=" text-gray-500">Free</td>
+                                        </tr>
+                                        <tr>
+                                        <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Total</td>
+                                        <td style="padding: 12px; border: 1px solid #ddd;" class=" text-gray-500">€197.77</td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                                </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-medium mb-4">Conclusion: What do the results mean?</h2>
+                    <p class="text-justify text-gray-500 leading-relaxed">
+                       The final results confirm that breaking the "Do Not Touch" barrier profoundly changes how visitors learn. The 156.3% increase in dwell time indicates that the challenge of the 3D puzzle creates a state of deep engagement, keeping visitors at the exhibit far longer than a standard observation-only display. More importantly, the 34% increase in information recall proves that "thinking with our hands" makes historical facts significantly more memorable. By maintaining a total unit cost under €200, this project demonstrates that museums can implement high-impact, smart exhibits using sustainable, accessible technology without requiring a massive budget.
+                    </p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium border-t border-gray-100">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+
+    <div class="fixed bottom-4 right-4 z-50">
+        <a href="#top" class="block">
+            <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+
+    <script src="../sidebar.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>

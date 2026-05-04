@@ -1,0 +1,645 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="../index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+    <style>
+        .flex-container-wrapper {
+            flex-direction: column;
+            min-height: calc(100vh - 80px);
+        }
+
+        @media (min-width: 640px) {
+            .flex-container-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        /* ── Hero image ── */
+        .media-hero {
+            position: relative;
+            width: 100%;
+            background: #0a0a0a;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .media-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0.92;
+            transition: opacity 0.4s ease;
+        }
+
+        .media-hero:hover img {
+            opacity: 1;
+        }
+
+        .media-hero-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1.5rem 1.25rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+            color: white;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        /* ── Video wrapper ── */
+        .media-video-wrap {
+            position: relative;
+            background: #0a0a0a;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.25rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .media-video-wrap video {
+            width: auto;
+            height: 640px;
+            max-height: 80vh;
+            display: block;
+            object-fit: contain;
+        }
+
+        @media (max-width: 640px) {
+            .media-video-wrap video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .media-video-label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: white;
+            font-size: 0.65rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
+            font-weight: 600;
+        }
+
+        /* ── Image gallery grid ── */
+        .media-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .media-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .media-gallery-item {
+            display: flex;
+            flex-direction: column;
+            cursor: zoom-in;
+        }
+
+        .media-gallery-item-img {
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 3 / 4;
+            background: #f4f4f2;
+        }
+
+        .media-gallery-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .media-gallery-item-caption {
+            margin-top: 0.6rem;
+            font-size: 0.78rem;
+            color: #888;
+            letter-spacing: 0.04em;
+            text-align: center;
+        }
+
+        /* ── Lightbox ── */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+
+        .lightbox-overlay.active {
+            display: flex;
+        }
+
+        .lightbox-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.5rem;
+            color: white;
+            font-size: 2rem;
+            line-height: 1;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .lightbox-close:hover {
+            opacity: 1;
+        }
+
+        /* ── Download buttons ── */
+        .btn-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-doc {
+            flex: 1;
+            min-width: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.25rem;
+            background: transparent;
+            border: 1px solid #1a1a1a;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-doc:hover {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .btn-doc svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+
+        /* ── Phase label ── */
+        .phase-eyebrow {
+            display: inline-block;
+            font-size: 0.68rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #888;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <nav class="top bg-white shadow-md flex-shrink-0">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:justify-start pl-12 sm:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="../index.html" class="logo-text"
+                            style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="../PhysicalComputing.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">PHYSICAL
+                    COMPUTING</a>
+                <a href="../design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">UI/UX
+                    DESIGN</a>
+                <a href="../graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../creative.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ARTEFACTS</a>
+                <a href="../Creative Projects/RedbreastMizunaraLaunch.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">The
+                    Master's Atelier</a>
+                <a href="../Creative Projects/claydragon.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Clay
+                    Dragon</a>
+                <a href="../Creative Projects/viperring.html"
+                    class="block rounded-md px-5 py-2 text-base text-sm text-white bg-gray-600 hover:bg-gray-400 hover:text-gray-700 transition-colors duration-200">ViperRing</a>
+                <a href="../contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-linkedin-square text-3xl text-center" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="https://github.com/annikajun" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-github-square text-3xl text.center" aria-hidden="true"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
+        <aside class="hidden sm:block w-full sm:w-1/4 bg-white text-center p-4 rounded-lg mr-4 flex-shrink-0">
+            <nav class="flex flex-col space-y-2">
+                <a href="../PhysicalComputing.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">PHYSICAL
+                    COMPUTING</a>
+                <a href="../design.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">UI/UX
+                    DESIGN</a>
+                <a href="../graphicdesign.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../creative.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">ARTEFACTS</a>
+                <a href="../Creative Projects/RedbreastMizunaraLaunch.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">The
+                    Master's Atelier</a>
+                <a href="../Creative Projects/claydragon.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Clay
+                    Dragon</a>
+                <a href="../Creative Projects/viperring.html"
+                    class="rounded-md px-3 py-2 text-sm bg-gray-600 text-white hover:bg-gray-300 hover:text-gray-700 transition-colors duration-200">ViperRing</a>
+                <a href="../contact.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <div class="flex justify-center">
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/annikajun" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="lg:w-3/4 md:w-3/4 sm:w-full bg-white">
+            <div class="p-4">
+
+                <p class="text-3xl text-center font-medium">ViperRing: Wearable Privacy Tool</p>
+                <br>
+
+                <!-- ── HERO IMAGE ── -->
+                <div class="media-hero">
+                    <img src="../images/ViperRing/ViperRing worn.png" alt="ViperRing worn on hand">
+                </div>
+
+                <!-- Metadata Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-gray-100">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Project Type</p>
+                        <p class="text-sm font-medium">Speculative Design & Research</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Medium</p>
+                        <p class="text-sm font-medium">Mixed Media & Digital Fiction</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Tools</p>
+                        <p class="text-sm font-medium">Blender, LTX Studio, DaVinci Resolve</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Team</p>
+                        <p class="text-sm font-medium">Individual
+                    </div>
+                </div>
+                <br>
+                <p class="text-justify text-gray-500">
+                    ViperRing is a speculative design fiction developed as a critical response to the pervasiveness of
+                    AI-driven data collection. The project consists of two interconnected components: a critical video
+                    essay exploring the concept of the Digital Doppelgänger, and a conceptual wearable smart ring
+                    designed to disrupted invisible surveillance in both physical and digital environments.
+                </p>
+                <br>
+                <p class="text-2xl font-medium">Design Context and Problem</p>
+                <br>
+                <p class="text-justify text-gray-500">
+                    The core research for this project investigates how AI systems utilise invisible surveillance
+                    mechanisms to shape user behavior. Key theoretical frameworks include:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+                    <div class="p-6 bg-gray-50 rounded-xl border-t-4 border-black">
+                        <span class="text-black font-bold">01.</span>
+                        <p class="font-medium text-gray-900 mt-2">Surveillance Capitalism</p>
+                        <p class="text-sm text-gray-500 mt-1">As defined by Shoshana Zuboff, this describes the
+                            treatment of human experience as free raw material for data extraction, leading to "digital
+                            dispossession"</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl border-t-4 border-gray-400">
+                        <span class="text-black font-bold">02.</span>
+                        <p class="font-medium text-gray-900 mt-2">Behavioral Surplus</p>
+                        <p class="text-sm text-gray-500 mt-1">The process of turning user experiences into prediction
+                            products sold in behavioral futures markets.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl border-t-4 border-gray-200">
+                        <span class="text-black font-bold">03.</span>
+                        <p class="font-medium text-gray-900 mt-2">Digital Doppelgängers</p>
+                        <p class="text-sm text-gray-500 mt-1">The creation of algorithmic replicas constructed from vast
+                            amounts of personal data that blur the lines of authenticity and consent.</p>
+                    </div>
+                </div>
+
+                <p class="text-justify text-gray-500">The project responds to the "black box" nature of AI, where users
+                    unknowingly share sensitive data that platforms use to predict and manipulate behavior.</p>
+                <br>
+                <p class="text-2xl font-medium">Responsibilities</p>
+                <br>
+                <p class="text-justify text-gray-500">
+                    This was an individual project involving end-to-end execution of the creative and technical
+                    workflow. Responsibilities encompassed conducting primary research which included a literature
+                    review on surveillance theory and critical technology studies and developing the speculative framing
+                    and the ViperRing as a tangible resistance prop. Furthermore, the responsibilities of this project
+                    involved authoring the full written report, creating storyboards for both project phases, and
+                    producing the final design outputs, as well as executing the design through 3D modeling and
+                    AI-assisted creative tools.
+                </p>
+                <br>
+                <p class="text-2xl font-medium">Design and Development Process</p>
+                <br>
+                <p class="text-justify text-gray-500">
+                    The development followed a rigorous, two-phase iterative process that translated abstract critical
+                    theory into a functional speculative narrative.
+                </p>
+                <br>
+
+                <!-- ── PHASE 01 VIDEO ── -->
+                <span class="phase-eyebrow">Phase 01</span>
+                <p class="text-xl" style="margin-top: 0.25rem;">Critical Video Essay ("I AM YOU")</p>
+                <br>
+                <p class="text-justify text-gray-500">
+                    The project began with a video essay created using LTX Studio to critique AI through its own medium.
+                    The narrative centers on a student whose data-sharing habits result in the emergence of a humanoid
+                    avatar, a digital doppelgänger, representing the AI's total knowledge of the user.
+                    <!-- <br>
+                    <br>
+                    Methods: AI-driven scene generation, character consistency tools, and Da Vinci Resolve for green-screen compositing. -->
+                </p>
+                <br>
+
+                <div class="flex justify-center py-8">
+                    <div class="flex flex-col items-center gap-3">
+                        <!-- <span class="text-xs font-medium uppercase tracking-widest text-gray-400">Video Essay</span> -->
+                        <video controls autoplay loop muted playsinline class="max-h-[80vh] rounded-lg">
+                            <source src="../images/ViperRing/AI Dopplegänger.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                            <a href="../images/ViperRing/AI Dopplegänger.mp4">Download the video</a> instead.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="btn-row">
+                    <a href="../images/ViperRing/AI Dopple gänger Design Statement.pdf" target="_blank" class="btn-doc">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 1h6l4 4v10H4V1z" />
+                            <path d="M10 1v4h4" />
+                            <path d="M6 9h4M6 11.5h4M6 6.5h2" />
+                        </svg>
+                        Design Statement
+                    </a>
+                    <a href="../images/ViperRing/AI Dopplegänger Storyboard.pdf" target="_blank" class="btn-doc">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="1" width="6" height="6" rx="1" />
+                            <rect x="9" y="1" width="6" height="6" rx="1" />
+                            <rect x="1" y="9" width="6" height="6" rx="1" />
+                            <rect x="9" y="9" width="6" height="6" rx="1" />
+                        </svg>
+                        Storyboard
+                    </a>
+                </div>
+
+                <br>
+
+                <!-- ── PHASE 02 VIDEO ── -->
+                <span class="phase-eyebrow">Phase 02</span>
+                <p class="text-xl" style="margin-top: 0.25rem;">ViperRing</p>
+                <br>
+                <p class="text-justify text-gray-500">
+                    Building on the video's critique, the ViperRing was developed as a physical tool for resistance.
+                    Early explorations included pendants and clip-on devices before selecting a ring for its symbolic
+                    resonance and ease of wear. Iterative 3D modeling was performed using Blender and Bambu Studio. The
+                    design was modified to include a USB-C charging port, haptic feedback sensors, and a red LED
+                    indicator to signal real-time AI tracking. A comprehensive identity was developed, including a
+                    "PrivAI" company profile, social media strategies, and AR filters (e.g., "Data Cloak") to
+                    demonstrate how the product would exist in a consumer market.
+                </p>
+                <br>
+
+                <div class="flex justify-center py-8">
+                    <div class="flex flex-col items-center gap-3 w-full">
+                        <!-- <span class="text-xs font-medium uppercase tracking-widest text-gray-400">3D Animation</span> -->
+                        <video controls autoplay loop muted playsinline class="w-full rounded-lg"
+                            style="object-fit: cover; aspect-ratio: 16/9;">
+                            <source src="../images/ViperRing/ViperRing Animation.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                            <a href="../images/ViperRing/ViperRing Animation.mp4">Download the video</a> instead.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="btn-row">
+                    <a href="../images/ViperRing/ViperRing Design Statement.pdf" target="_blank" class="btn-doc">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 1h6l4 4v10H4V1z" />
+                            <path d="M10 1v4h4" />
+                            <path d="M6 9h4M6 11.5h4M6 6.5h2" />
+                        </svg>
+                        Design Statement
+                    </a>
+                    <a href="../images/ViperRing/ViperRing Storyboard.jpg" target="_blank" class="btn-doc">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="1" width="6" height="6" rx="1" />
+                            <rect x="9" y="1" width="6" height="6" rx="1" />
+                            <rect x="1" y="9" width="6" height="6" rx="1" />
+                            <rect x="9" y="9" width="6" height="6" rx="1" />
+                        </svg>
+                        Storyboard
+                    </a>
+                </div>
+
+                <br>
+                <p class="text-2xl font-medium">Visual and Interaction Documentation</p>
+                <br>
+                <p class="text-justify text-gray-500">
+                    The ViperRing is designed to act as a personal AI firewall and challenges the normalisation od
+                    surveillance. Interaction points include haptic and visual alarms and a "Stealth Mode".
+                    The ring vibrates and flashes its red LED when tracking or data harvesting is detected on platforms
+                    like TikTok or YouTube.
+                    Additionally, users can activate a "Stealth Mode" that scrambles trackers with decoy data.
+                </p>
+                <br>
+
+                <div class="media-gallery">
+                    <div class="media-gallery-item" onclick="openLightbox(this)">
+                        <div class="media-gallery-item-img">
+                            <img src="../images/ViperRing/Sketches.jpeg" alt="Early Concept Sketch of the Project Idea">
+                        </div>
+                        <div class="media-gallery-item-caption">Early Concept Sketch of the Project Idea</div>
+                    </div>
+                    <div class="media-gallery-item" onclick="openLightbox(this)">
+                        <div class="media-gallery-item-img">
+                            <img src="../images/ViperRing/ViperRing.png" alt="Final Render of the ViperRing">
+                        </div>
+                        <div class="media-gallery-item-caption">Final Render of the ViperRing</div>
+                    </div>
+                </div>
+
+                <br>
+                <p class="text-2xl font-medium">Reflection</p>
+                <br>
+                <p class="text-justify text-gray-500">
+                    This project highlighted AI's dual role as both a tool for exploitation and a means for inquiry and
+                    resistance. The design process demonstrated that speculative interventions can effectively expose
+                    hidden algorithmic processes and encourage critical reflection on data privacy. The foundational
+                    literature review proved essential in giving the artifact a theoretical grounding beyond
+                    surface-level provocation.
+                    <br><br>
+                    Further iterations of this work would prioritise, advance materiality by producing a high-fidelity
+                    model to enhance the believability of the speculative artefact. Furthermore, moving to a
+                    participatory design approach would allow to involve communities most affected by surveillance,
+                    ensuring a more inclusive approach to resistance tools.
+                    <br><br>
+                    While the ViperRing remains a conceptual probe, it underscores the urgent need for ongoing critical
+                    engagement with the opaque mechanisms through which AI shapes digital life.
+                </p>
+                <br>
+                <p class="text-justify text-gray-500">View my further documentation below:</p>
+
+                <div class="btn-row" style="margin-bottom: 2rem;">
+                    <a href="../images/ViperRing/22359923_CS4358_Report.pdf" target="_blank" class="btn-doc">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 1h6l4 4v10H4V1z" />
+                            <path d="M10 1v4h4" />
+                            <path d="M6 9h4M6 11.5h4M6 6.5h2" />
+                        </svg>
+                        Report
+                    </a>
+                    <a href="../images/ViperRing/Project Presentation.pdf" target="_blank" class="btn-doc">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="2" width="14" height="10" rx="1" />
+                            <path d="M8 12v3M5 15h6" />
+                        </svg>
+                        Presentation
+                    </a>
+                    <a href="../images/ViperRing/ViperRing.blend" target="_blank" class="btn-doc">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="8" cy="8" r="4" />
+                            <circle cx="8" cy="8" r="1.5" />
+                            <path d="M8 1v2M8 13v2M1 8h2M13 8h2" />
+                        </svg>
+                        Blender
+                    </a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+    <div class="fixed bottom-4 right-4 z-50">
+        <a href="#top" class="block">
+            <i
+                class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script src="../sidebar.js"></script>
+    <script>
+        function openLightbox(el) {
+            const img = el.querySelector('img');
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-img').alt = img.alt;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+</body>
+
+</html>

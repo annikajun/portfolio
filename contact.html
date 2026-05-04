@@ -11,6 +11,14 @@
     <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
     <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <title> ANNiKA</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" >
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body class="flex flex-col min-h-screen">
@@ -19,163 +27,330 @@
         <div class="mx-auto max-w-8xl px-2 md:px-6">
             <div class="relative flex h-16 items-center justify-between">
                 <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
-                    <!-- Mobile menu button, now with an ID for JavaScript -->
                     <button type="button"
                         class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
                         aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
                         <span class="absolute -inset-0.5"></span>
                         <span class="sr-only">Open main menu</span>
-                        <!-- Icon when menu is closed, now with an ID -->
                         <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
-                        <!-- Icon when menu is open, initially hidden, now with an ID -->
                         <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
                 <div class="flex flex-1 items-center justify-between md:items-stretch pl-12 md:pl-0">
                     <div class="flex shrink-0 text-black text-2xl">
-                        <a href="index.html" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA </a>
+                        <a href="index.html" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA
+                        </a>
                     </div>
                     <div class="hidden md:ml-6 md:block">
                         <div class="flex">
+                            <a href="PhysicalComputing.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">PHYSICAL
+                                COMPUTING</a>
                             <a href="design.html"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white"
-                                aria-current="page">DESIGN</a>
+                                aria-current="page">UI/UX DESIGN</a>
                             <a href="graphicdesign.html"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">GRAPHIC
                                 DESIGN</a>
-                            <a href="3dprints.html"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">3D
-                                PRINTS</a>
-                            <a href="coding.html"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CODING</a>
-                            <a href="aboutme.html"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">ABOUT ME</a>
-                            <a href="contact.html"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">CONTACT</a>
+                            <a href="creative.html"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">ARTEFACTS</a>
+                            <a href="contact.html" class="rounded-md px-3 py-2 text-sm font-medium         
+                                bg-gray-700 text-white hover:bg-gray-400 hover:text-black transition-colors duration-200
+                                ">CONTACT</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-        </div>
 
-        <!-- Mobile menu, now with 'hidden' class by default -->
+        <!-- Mobile menu -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="PhysicalComputing.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">PHYSICAL
+                    COMPUTING</a>
                 <a href="design.html"
                     class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white"
-                    aria-current="page">DESIGN</a>
+                    aria-current="page">UI/UX DESIGN</a>
                 <a href="graphicdesign.html"
                     class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">GRAPHIC
                     DESIGN</a>
-                <a href="3dprints.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">3D
-                    PRINTS</a>
-                <a href="coding.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CODING</a>
-                <a href="aboutme.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">ABOUT ME</a>
+                <a href="creative.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">ARTEFACTS</a>
                 <a href="contact.html"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-700 hover:text-white">CONTACT</a>
+                    class="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-700 hover:bg-gray-400 hover:text-gray-700 transition-colors duration-200">CONTACT</a>
+                <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-linkedin-square text-3xl text-center" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="https://github.com/annikajun" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-github-square text-3xl" aria-hidden="true"></i> GitHub
+                </a>
             </div>
         </div>
     </nav>
-    <!-- Main content area -->
-    <div class="flex flex-col md:flex-row flex-container-wrapper p-4 flex-grow">
-       <main class="md:w-2/4 sm:w-full">
-       <p class="text-2xl p-4"> Let's Connect.</p>
-       <p class="p-4 pr-10 text-lg text-justify">Have a question about my work, a potential project, or simply want to chat about design and coding? The best ways to get in touch are through email or by connecting on LinkedIn. I look forward to hearing from you!
-       </p>
-       <br>
-          <div class="flex gap-8">
-                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
-                    class="px-6 py-2 scale-150 text-[#3578AF] hover:scale-180 ">
-                    <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
-                    </a> 
-                    <section class="contact section_snap" id="contact">
-                    <div class="tooltip-wrapper">
-                        <button class="tooltip-button" onclick="toggleTooltip('Email')">
-                        <i class="fa fa-envelope text-[#3578AF] scale-300 py-3.5 hover:scale-325"></i>
-                        </button>
-                    <div id="Email" class="tooltip-text">annika.jungfleisch01@gmail.com</div>
-                    </div>
-                    </section>
-            </div>
-            <!-- Featured LinkedIn Posts -->
-            <div class="px-4 py-6">
-                <p class="text-2xl mb-4 text-black">Featured LinkedIn Posts</p>
-                <div class="grid grid-cols-1 grid-cols-2  gap-6">
-                    <!-- LinkedIn Post 1 -->
-                    <a href="https://www.linkedin.com/posts/annika-jungfleisch_what-a-year-its-been-in-may-last-year-activity-7318946015066152960-6P84?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEEGznUBu6jJmYzKrifynVTOwbQyE7jPWiY" target="_blank" class="block bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                        <img src="images/LinkedIn Post 1.webp" alt="LinkedIn Post Thumbnail" class="w-full h-32 object-cover rounded-t-lg">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg text-gray-800 mb-2">What a year it’s been…</h3>
-                            <p class="text-gray-600 text-sm line-clamp-3">In May last year, I stepped into the role of Team Lead for...</p>
-                            <span class="text-blue-600 text-sm mt-2 block hover:underline">Read on LinkedIn &rarr;</span>
-                        </div>
-                    </a>
 
-                    <!-- LinkedIn Post 2 -->
-                    <a href="https://www.linkedin.com/posts/annika-jungfleisch_im-honored-to-have-received-the-gold-presidents-activity-7255136520909549568-5UO2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEEGznUBu6jJmYzKrifynVTOwbQyE7jPWiY" target="_blank" class="block bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                        <img src="images/LinkedIn Post 2.webp" alt="LinkedIn Post Thumbnail" class="w-full h-32 object-cover rounded-t-lg">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg text-gray-800 mb-2">PVA Award</h3>
-                            <p class="text-gray-600 text-sm line-clamp-3">I'm honored to have received the Gold President's...</p>
-                            <span class="text-blue-600 text-sm mt-2 block hover:underline">Read on LinkedIn &rarr;</span>
-                        </div>
-                    </a>
-                </div>
-                <p class="text-gray-600 text-sm mt-6 text-center">
-                    For more insights and updates, connect with me on <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>.
-                </p>
+    <!-- START OF TWO COLUMN SECTION (About & Sticky Bubbles) -->
+    <div class="flex flex-col md:flex-row flex-container-wrapper p-4">
+        <!-- Left Column (Bio & Toolkit) -->
+<!-- Main Hero Intro -->
+<main class="w-full md:w-3/4 lg:w-2/3 p-4">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        Hello! I'm Annika, an Interaction Designer & Creative Technologist based in Ireland.
+    </h1>
+    <p class="text-xl leading-relaxed max-w-3xl mb-12">
+        My core interests are in the intersection of digital fabrication and creative coding. 
+        To me, technology is most powerful when it steps off the screen and into the tactile world.
+    </p>
+
+    <!-- The 3-Column Philosophy Section (Reduces Scrolling) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <!-- Column 1: Approach -->
+        <div>
+            <h3 class="text-lg font-bold uppercase tracking-wider mb-3">My Approach</h3>
+            <p class="text-gray-700 text-sm leading-relaxed text-justify hyphens-auto" lang="en">
+                My background is shaped by a dual appreciation for technical precision and human-centered storytelling. 
+                During my time at the University of Limerick, I developed a multidisciplinary toolkit from soldering circuits to high-fidelity UI/UX design.
+            </p>
+        </div>
+
+        <!-- Column 2: Motivation -->
+        <div>
+            <h3 class="text-lg font-bold uppercase tracking-wider mb-3">My Motivation</h3>
+            <p class="text-gray-700 text-sm leading-relaxed text-justify hyphens-auto" lang="en">
+                I am motivated by the challenge of transparency, taking complex technology and making it accessible to everyone. 
+                As a designer, I prioritise accessibility, social impact, and purpose.
+            </p>
+        </div>
+
+        <!-- Column 3: Future -->
+        <div>
+            <h3 class="text-lg font-bold uppercase tracking-wider mb-3">My Future</h3>
+            <p class="text-gray-700 text-sm leading-relaxed text-justify hyphens-auto" lang="en">
+            Looking forward, I am finding a path as a Creative Technologist working on interactive installations, smart environments, and tools for social good.
+            </p>
+        </div>
+    </div>
+
+    <!-- Highlighted Question (The "Hook") -->
+    <div class="border-l-4 border-black pl-6 my-8">
+        <p class="text-xl font-bold italic text-gray-800">
+            "How can we use emerging technology to create experiences that are both functional and deeply human?"
+        </p>
+    </div>
+
+    <div class="p-4 mt-4 bg-gray-50 rounded-xl">
+        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">My Software & Hardware Toolkit</p>
+        <div class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-11 gap-x-4 gap-y-8 items-center justify-items-center border-t border-gray-100 pt-4 pb-6">
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/Figma.webp" alt="Figma" class="h-6 md:h-8 transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Figma</span>
             </div>
-       </main>
-    <main class="hidden md:block md:w-2/4">
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/InDesign.webp" alt="InDesign" class="h-6 md:h-8 transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">InDesign</span>
+            </div>
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/blender.png" alt="Blender" class="h-6 md:h-8 transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Blender</span>
+            </div>
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/FreeCAD.webp" alt="FreeCAD" class="h-6 md:h-8 transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">FreeCAD</span>
+            </div>
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/bambu.png" alt="Bambu Studio" class="h-6 md:h-8 transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Bambu Studio</span>
+            </div>
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/Arduino.webp" alt="Arduino" class="h-6 md:h-8 transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Arduino</span>
+            </div>
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/processing.png" alt="Processing" class="h-6 md:h-8 transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Processing</span>
+            </div>
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/HTML.webp" alt="HTML" class="h-6 md:h-8 transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">HTML</span>
+            </div>
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/CSS.webp" alt="CSS" class="h-6 md:h-8 transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">CSS</span>
+            </div>
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/JavaScript.webp" alt="JavaScript" class="h-6 md:h-8 transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">JavaScript</span>
+            </div>
+
+            <div class="group relative flex flex-col items-center cursor-pointer">
+            <img src="images/trello.jpeg" alt="Trello" class="h-6 md:h-8 rounded transition-transform duration-200 group-hover:scale-125">
+            <span class="absolute -bottom-5 text-[10px] font-medium text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Trello</span>
+            </div>
+
+        </div>
+        </div>
+</main>
+
+        <!-- Right Column (Sticky Bubbles) -->
+        <main class="hidden md:block md:w-2/4 sticky top-24 self-start">
             <div class="PictureBubbles bubble-container">
-                <div class="bubble bubble-1">
-                    <img src="images/Contact/Coding.webp" alt="VS Code Computer Screen" >
-                </div>
-                <div class="bubble bubble-2">
-                    <img src="images/Contact/VideoContent.webp" alt="Video Shoot">
-                </div>
-                <div class="bubble bubble-3" alt="Thumbs Up">
-                    <img src="images/Contact/ThumbsUp.webp">
-                </div>
-                <div class="bubble bubble-4">
-                    <img src="images/Contact/Electronics.webp" alt="Electronics and 3D Models">
-                </div>
-                <div class="bubble bubble-5">
-                    <img src="images/Contact/ProductDesign.webp" alt="Flatback Lamp Prototype">
-                </div>
-                <div class="bubble bubble-6">
-                    <img src="images/Contact/PublicSpeaking.webp" alt="Public Speaking">
-                </div>
+                <div class="bubble bubble-1"><img src="images/Contact/Coding.webp" alt="Coding"></div>
+                <div class="bubble bubble-2"><img src="images/Contact/VideoContent.webp" alt="Video"></div>
+                <div class="bubble bubble-3"><img src="images/Contact/ThumbsUp.webp" alt="Thumbs Up"></div>
+                <div class="bubble bubble-4"><img src="images/Contact/Electronics.webp" alt="Electronics"></div>
+                <div class="bubble bubble-5"><img src="images/Contact/ProductDesign.webp" alt="Product"></div>
+                <div class="bubble bubble-6"><img src="images/Contact/PublicSpeaking.webp" alt="Speaking"></div>
             </div>
         </main>
+    </div>
+    <!-- END OF TWO COLUMN SECTION -->
+
+    <!-- FULL WIDTH BOTTOM SECTION (Contact, CV, & Posts) -->
+    <div class="p-4 w-full flex-grow">
+        <div class="p-4 w-full">
+            <div
+                class="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Let's build something together.</h2>
+                    <p class="text-gray-600">Currently open to collaborations and new opportunities.</p>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <!-- Unified LinkedIn Button -->
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
+                        class="flex items-center gap-2 px-5 py-3 bg-[#0077b5] text-white rounded-xl hover:bg-[#005a87] transition-colors">
+                        <i class="fa fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <!-- Professional CV Button -->
+                    <a href="images/Annika_Jungfleisch_CV.pdf" target="_blank"
+                        class="flex items-center gap-2 px-5 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors">
+                        <i class="fa fa-file-pdf-o"></i>
+                        <span>View CV</span>
+                    </a>
+
+                    <!-- Email with Copy Function -->
+                    <button onclick="copyEmail()"
+                        class="group relative flex items-center gap-2 px-5 py-3 bg-white border border-gray-200 rounded-xl hover:border-black transition-all">
+                        <i class="fa fa-envelope"></i>
+                        <span id="email-text">Email</span>
+                        <!-- Mini Tooltip -->
+                        <span id="copy-toast"
+                            class="absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 transition-opacity">Copied!</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LinkedIn Posts -->
+        <div class="py-12">
+            <p class="text-2xl mb-6 text-black">Featured Posts</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://www.linkedin.com/posts/annika-jungfleisch_yesterday-i-had-the-pleasure-of-presenting-ugcPost-7442675128607469568-pnFt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEEGznUBu6jJmYzKrifynVTOwbQyE7jPWiY" target="_blank"
+                    class="block bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="images/LinkedIn Post 3.jpeg" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800">All Ireland Conference for Undergraduate Research 2026 (AICUR)</h3>
+                        <p class="text-gray-600 text-sm line-clamp-3">Yesterday, I had the pleasure of presenting at the All Ireland Conference for Undergraduate Research 2026 (AICUR). From submitting my abstract...</p>
+                        <span class="text-blue-600 text-sm mt-2 block">Read on LinkedIn &rarr;</span>
+                    </div>
+                </a>
+                <!-- Post 2 -->
+                <a href="https://www.linkedin.com/posts/annika-jungfleisch_im-delighted-to-have-received-the-gold-presidents-ugcPost-7397622039383007232-wg66?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEEGznUBu6jJmYzKrifynVTOwbQyE7jPWiY" target="_blank"
+                    class="block bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="images/LinkedIn Post 2.webp" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800">PVA Gold Award</h3>
+                        <p class="text-gray-600 text-sm line-clamp-3">I'm delighted to have received the Gold President's Volunteer Award last month. A huge thank you and congratulations to...</p>
+                        <span class="text-blue-600 text-sm mt-2 block">Read on LinkedIn &rarr;</span>
+                    </div>
+                </a>
+                <!-- Post 3 -->
+                <a href="https://www.linkedin.com/posts/annika-jungfleisch_what-a-year-its-been-in-may-last-year-activity-7318946015066152960-6P84?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEEGznUBu6jJmYzKrifynVTOwbQyE7jPWiY" target="_blank"
+                    class="block bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="images/LinkedIn Post 1.webp" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800">What a year it’s been…</h3>
+                        <p class="text-gray-600 text-sm line-clamp-3">In May last year, I stepped into the role of Team Lead for Enactus UL, a role previously shared by three people, and one I took on solo...</p>
+                        <span class="text-blue-600 text-sm mt-2 block">Read on LinkedIn &rarr;</span>
+                    </div>
+                </a>
+                <!-- Template Item 1 -->
+                <a href="https://www.ilovelimerick.ie/university-of-limerick-computer-science/" target="_blank"
+                    class="block bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="images/Featured Post 1.jpg" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800">University of Limerick Computer Science students showcase Final Year Projects</h3>
+                        <p class="text-gray-600 text-sm line-clamp-3">Students at University of Limerick had their innovative and socially focused final year projects (FYP)...</p>
+                        <span class="text-blue-600 text-sm mt-2 block">Read on ilovelimerick.ie &rarr;</span>
+                    </div>
+                </a>
+                <!-- Template Item 2 -->
+                <a href="https://www.linkedin.com/posts/faculty-of-science-and-engineering-university-of-limerick_studyatul-activity-7455164047424954368-k40Y?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEEGznUBu6jJmYzKrifynVTOwbQyE7jPWiY" target="_blank"
+                    class="block bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="images/Featured Post 2.png" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800">Can touching history help you learn?</h3>
+                        <p class="text-gray-600 text-sm line-clamp-3">Fourth-year BSc in Interaction Design student Annika Jungfleisch’s final-year project is an interactive museum exhibit...</p>
+                        <span class="text-blue-600 text-sm mt-2 block">Watch on LinkedIn &rarr;</span>
+                    </div>
+                </a>
+                <!-- Template Item 3 -->
+                <a href="https://" target="_blank"
+                    class="block bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="images/" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg text-gray-800">Title</h3>
+                        <p class="text-gray-600 text-sm line-clamp-3">Body</p>
+                        <span class="text-blue-600 text-sm mt-2 block">Read on ... &rarr; </span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 
     <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
         <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
     </footer>
 
- <!-- Scroll Up Button - positioned fixed at bottom right -->
+    <!-- Scroll Up Button -->
     <div class="fixed bottom-4 right-4 z-50">
-       
         <a href="#top" class="block">
-            <!-- Icon with Tailwind classes replacing the custom CSS -->
-            <i class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+            <i
+                class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 hover:-translate-y-1.5"></i>
         </a>
     </div>
 
     <script src="menu.js"></script>
+    <script>
+        function copyEmail() {
+            const email = "annika.jungfleisch01@gmail.com";
+            navigator.clipboard.writeText(email);
+            const toast = document.getElementById('copy-toast');
+            toast.classList.remove('opacity-0');
+            setTimeout(() => toast.classList.add('opacity-0'), 2000);
+        }
+</script>
 </body>
 
 </html>

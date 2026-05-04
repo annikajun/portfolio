@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dcd4cc2d7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title> ANNiKA</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+    <style>
+        .flex-container-wrapper {
+            flex-direction: column;
+            min-height: calc(100vh - 80px);
+        }
+
+        @media (min-width: 640px) {
+            .flex-container-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        main {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <!-- Navigation Bar (Top Header) -->
+    <nav class="top bg-white shadow-sm flex-shrink-0">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-closed">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" id="menu-icon-open">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex flex-1 items-center justify-center sm:justify-start pl-12 sm:pl-0">
+                    <div class="flex shrink-0 text-black text-2xl">
+                        <a href="index.html" class="logo-text"
+                            style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ANNiKA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden bg-gray-100 rounded-b-lg shadow-lg" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="PhysicalComputing.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">PHYSICAL
+                    COMPUTING</a>
+                <a href="design.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">UI/UX
+                    DESIGN</a>
+                <a href="graphicdesign.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../creative.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-white bg-gray-700 hover:bg-gray-400 hover:text-gray-700 transition-colors duration-200">ARTEFACTS</a>
+                <a href="../Creative Projects/RedbreastMizunaraLaunch.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">The Master's Atelier</a>
+                <a href="../Creative Projects/claydragon.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Clay
+                    Dragon</a>
+                <a href="../Creative Projects/viperring.html"
+                    class="block rounded-md px-5 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">ViperRing</a>
+                <a href="contact.html"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <a href="https://www.linkedin.com/in/annika-jungfleisch/" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-linkedin-square text-3xl text-center" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="https://github.com/annikajun" target="_blank"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                    <i class="fa fa-github-square text-3xl" aria-hidden="true"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <div class="flex flex-col sm:flex-row flex-container-wrapper p-4 flex-grow">
+        <!-- Sidebar -->
+        <aside
+            class="hidden sm:block w-full sm:w-1/4 bg-gray-100 text-center p-4 rounded-lg shadow-lg mr-4 flex-shrink-0">
+            <nav class="flex flex-col space-y-2">
+                <a href="PhysicalComputing.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">PHYSICAL
+                    COMPUTING</a>
+                <a href="design.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">UI/UX
+                    DESIGN</a>
+                <a href="graphicdesign.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">GRAPHIC
+                    DESIGN</a>
+                <a href="../creative.html"
+                    class="rounded-md px-3 py-2 text-md font-bold bg-gray-700 text-white hover:bg-gray-400 hover:text-gray-700 transition-colors duration-200">ARTEFACTS</a>
+                <a href="../Creative Projects/RedbreastMizunaraLaunch.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">The Master's Atelier</a>
+                <a href="../Creative Projects/claydragon.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">Clay
+                    Dragon</a>
+                <a href="../Creative Projects/viperring.html"
+                    class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-200">ViperRing</a>
+                <a href="contact.html"
+                    class="rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">CONTACT</a>
+                <div class="flex justify-center">
+                    <a href="https://www.linkedin.com/in/annika-jungfleisch" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-linkedin-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/annikajun" target="_blank"
+                        class="w-15 rounded-md px-3 py-2 text-md font-bold text-gray-700 hover:bg-gray-700 hover:text-white transition-colors duration-200">
+                        <i class="fa fa-github-square text-3xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Projects Grid -->
+        <main class="lg:w-3/4 md:w-3/4 sm:w-full bg-white">
+            <div class="grid lg:grid-cols-2 md:grid-cols-2 gap-2 p-4">
+                <!-- The Master's Atelier-->
+                <div class="relative w-full pb-[56.25%] group">
+                    <a href="Creative Projects/RedbreastMizunaraLaunch.html"
+                        class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-200">
+                        <img src="images/Redbreast/Redbreast Thumbnail.png" alt="Redbreast Thumbnail"
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div
+                                class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                                <p class="text-black text-3xl md:text-xl lg:text-3xl text-center">The Master's Atelier</p>
+                                <p class="text-gray-600 text-lg md:text-sm lg:text-lg mt-2 text-center px-4">An Immersive Whiskey Experience 
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- ViperRing AI Multimedia -->
+                <div class="relative w-full pb-[56.25%] group">
+                    <a href="Creative Projects/viperring.html"
+                        class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-200">
+                        <img src="images/ViperRing/ViperRing worn.png" alt="ViperRing Thumbnail"
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div
+                                class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                                <p class="text-black text-3xl md:text-xl lg:text-3xl text-center">ViperRing</p>
+                                <p class="text-gray-600 text-lg md:text-sm lg:text-lg mt-2 text-center px-4">A
+                                    Speculative
+                                    Design Fiction</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Clay Dragon -->
+                <div class="relative w-full pb-[56.25%] group">
+                    <a href="Creative Projects/claydragon.html"
+                        class="absolute inset-0 block overflow-hidden rounded-lg shadow-lg bg-gray-200">
+                        <img src="images/ClayDragon/Norbert Thumbnail.png" alt="Clay Dragon"
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div
+                                class="bg-white w-4/5 h-4/5 flex flex-col items-center justify-center rounded-lg opacity-90 shadow-xl">
+                                <p class="text-black text-3xl md:text-xl lg:text-3xl text-center">"Norbert"</p>
+                                <p class="text-gray-600 text-lg md:text-sm lg:text-lg mt-2 text-center px-4">Mixed Media
+                                    Dragon
+                                    Sculpture</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="w-full bg-white py-5 text-center text-black text-sm font-medium">
+        <p>Made with <i class="fa-regular fa-heart"></i> by Annika Jungfleisch</p>
+    </footer>
+
+    <div class="fixed bottom-4 right-4 z-50">
+        <a href="#top" class="block">
+            <i
+                class="ri-arrow-up-s-line block p-3 text-2xl text-white bg-black rounded-full transition-transform duration-500 ease-in-out hover:text-white hover:-translate-y-1.5"></i>
+        </a>
+    </div>
+
+    <script src="sidebar.js"></script>
+</body>
+
+</html>

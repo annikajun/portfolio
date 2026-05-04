@@ -85,7 +85,7 @@ Project Link: [https://github.com/annikajun/portfolio](https://github.com/annika
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[product-screenshot]: images/PortfolioScreenshot.webp
+[product-screenshot]: images/PortfolioScreenshot.png
 
 [Tailwind]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
